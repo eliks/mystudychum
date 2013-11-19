@@ -1,0 +1,91 @@
+.header{
+	height: 100px
+}
+.logo{
+	height: 70px
+}
+.headline{
+	font-family: 'Oxygen';
+	font-weight: bold;
+	/*color: #C04405;*/
+	/*color: #E47707;*/
+	/*color: #2E2E2C;*/
+	color: #857F7B;
+	font-size: 48px;
+	margin-left: 5px;
+	display: inline;
+	margin-top: -2px;
+}
+.tagline{
+	font-size: 20px;
+	text-align: center
+}
+/* Half Page Height Carousel Customization */
+.carousel {
+  height: 50%
+}
+.item,
+.active,
+.carousel-inner {
+	height: 100%
+}
+.carousel-caption{
+	text-align: center	
+}
+.mast > h1{
+	color: white
+}
+.fill {
+	height: 500px;
+	background-size: cover;
+}
+.slide1{
+	background-image: url('../img/connect.webp');
+}
+.slide2{
+	background-image: url('../img/student.webp');
+}
+.slide3{
+	background-image: url('../img/group.webp');
+	/*background-size: cover;*/
+}
+.input-group{
+	width: 90%;
+	margin: 0 auto
+}
+.mast{
+	margin: 10px 10px;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-radius: 10px;
+}
+.google{
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	width: 100%;
+	margin-top: 17px;
+	padding: 15px;
+}
+.google-nav{
+	width: 200px;
+	text-align: center
+}
+.features{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-size: 18px;
+	text-align: center
+}
+.glyphicon{
+	font-size: 60px;
+	padding-bottom: 30px
+}
+.btn .btn-success{
+	background-color: #857F7B;
+}
+/* Responsive Styles */
+@media (max-width: 767px) {
+	.carousel {
+	  height: 70% /* increases the carousel height so it looks good on phones */
+	}
+}
