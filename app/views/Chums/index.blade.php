@@ -152,7 +152,7 @@
 			<div class="row">
 
 				<h3></h3>
-				<?php
+				  <!-- <?php
 					// users are directed here when they accept the invitation
 					if (FALSE) {
 						
@@ -183,12 +183,7 @@
 				    	$message_body .= "Click the link below to see your chums.\n";
 				    	$message_body .= "studychumapp.appspot.com/mychums";
 
-						$mail_options = [
-							"sender" => 'studychumgh@gmail.com',
-							"to" => $_GET['sender'],
-							"subject" => "Your chum request has been accepted",
-							"textBody" => $message_body
-					];
+;
 
 						try {
 						    $message = new Message($mail_options);
@@ -199,10 +194,10 @@
     					
     					
 					}
-				?>
+				?> -->
 
 				<h3 class="profile-heading">Recommended chums</h3>
-				<?php
+				<!-- <?php
 
 					// instantiating database
 					$db = new Database();
@@ -265,7 +260,7 @@
 
 					$db->disconnect();
 
-				?>
+				?> -->
 			</div>
 
 			<div class="row pages">
@@ -284,9 +279,9 @@
 		</div>
 	</div>
 
-	<script src="assets/js/jquery-2.0.3.min.js"></script>
-	<script src="assets/js/bs.min.js"></script>
-	<script src="assets/js/app.js"></script>
+	<script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/app.js') }}"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
