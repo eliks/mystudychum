@@ -1,47 +1,47 @@
-// <?php
-	// //include 'models/database.php';
-	// include 'classes/crud.php';
-// 
-	// // Including Google's User Service
-	// require_once 'google/appengine/api/users/UserService.php';
-	// use google\appengine\api\users\User;
-    // use google\appengine\api\users\UserService;
-// 
-    // // new instance of user
-    // $user = UserService::getCurrentUser();
-//     
-// 
-    // //redirecting user to logout page if user has not already signed up
-    // if (!$user){
-//     	
-    	// header('Location: ' .
-        // UserService::createLoginURL($_SERVER['REQUEST_URI']));
-    // }
-// 
-//     
-    // $db = new Database();
-    // $db->connect();
-    // $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
-    // $res = $db->getResult();
-// 
-//     
-// 
-    // if (count($res)>0) {
-    	// header('Location: /profile');
-    // }
-//    
-// ?>
+<!-- <?php
+	//include 'models/database.php';
+	include 'classes/crud.php';
+
+	// Including Google's User Service
+	require_once 'google/appengine/api/users/UserService.php';
+	use google\appengine\api\users\User;
+    use google\appengine\api\users\UserService;
+
+    // new instance of user
+    $user = UserService::getCurrentUser();
+    
+
+    //redirecting user to logout page if user has not already signed up
+    if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+
+    
+    $db = new Database();
+    $db->connect();
+    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+    $res = $db->getResult();
+
+    
+
+    if (count($res)>0) {
+    	header('Location: /profile');
+    }
+   
+?> -->
 
 <html>
 <head>
-	<title>StudyChum - Your Profile</title>
+	<title>StudyChum - Create Profile</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{ HTML::style('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen')}}
-        {{ HTML::style('/assets/css/bs.min.css') }}
-        {{ HTML::style('/assets/css/app.css') }}
+        {{ HTML::style('/assets/css/bs.min.css')}}
+        {{ HTML::style('/assets/css/app.css')}}
         {{ HTML::style('/assets/css/create.css')}}
         {{ HTML::style('/assets/css/bootstrap-tagsinput.css')}}
         {{ HTML::style('/assets/css/jasny-bootstrap.css')}}
@@ -101,7 +101,7 @@
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="/logout">Log out</a></li>
+			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 			        </ul>
 			      </li>
 
@@ -178,10 +178,21 @@
 							<div class="form-group" required>
 								<p>Country</p>
 								<select class="form-control" name="country">
-										<option value="">Ghana</option>
-										<option value="">Togo</option>
-										<option value="">Nigeria</option>
-										<option value="">Zambia</option>
+								<?php
+								// Creating a new instance of the database
+								$db = new Database();
+								$db->connect();
+
+								$db->select('Countries'); // Table name
+								$res = $db->getResult();
+
+								//displaying interests from the database
+								foreach ($res as $country) {
+									
+										echo '<option value="' . $country["Name"] . '"> ' . $country["Name"] . '</option>';
+									}
+								
+								?>
 								</select>
 							</div>
 
@@ -207,8 +218,8 @@
 	</div>
 
 	<script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
-	<script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
-	<script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/app.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/bootstrap-tagsinput.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/jasny-bootstrap.js') }}"></script>
 
