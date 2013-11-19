@@ -11,12 +11,19 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', array('uses'=>'IndexController@get_index'));
 
 Route::get('/users', function()
 {
     return 'Users!';
 });
+
+Route::get('chums', array('uses'=>'ChumsController@get_index'));
+
+Route::get('activity', array('uses'=>'ActivityController@get_index'));
+
+Route::get('forum', array('uses'=>'ForumController@get_index'));
+
+Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
+
+Route::get('profile', array('uses'=>'ProfileController@get_index'));
