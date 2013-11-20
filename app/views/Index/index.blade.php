@@ -22,10 +22,10 @@
                     <div class="headline">StudyChum</div>
                 </div>
                 <div class="col-md-3">
-                    <a class="press orange google" href="/create">Sign in with Google</a>
+                    <a class="press orange google" href="signin">Sign in with Google</a>
                 </div>
                 <div class="col-md-2">
-                    <a class="press gray google" href="/create">Sign up</a>
+                    <a class="press gray google" href="signup">Sign up</a>
                 </div>
             </div>
         </div>

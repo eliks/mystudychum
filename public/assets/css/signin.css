@@ -1,0 +1,56 @@
+a, a:hover, a:focus {
+	color: #cb5429 !important;
+}
+.account-box
+{
+    /*border: 2px solid rgba(153, 153, 153, 0.75);
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -o-border-radius: 2px;
+    z-index: 3;
+    font-size: 13px !important;
+    font-family: "Helvetica Neue" ,Helvetica,Arial,sans-serif;
+    background-color: #ffffff;
+    padding: 20px;*/
+   margin-top: 50px;
+}
+
+.logo
+{
+    width: 138px;
+    height: 30px;
+    text-align: center;
+    margin: 10px auto 27px;
+    background-position: 0px -4px;
+    position: relative;
+}
+
+.forgotLnk, .signupLnk
+{
+    margin-top: 10px;
+    display: block;
+    width: *;
+    text-align: center;
+}
+
+.purple-bg
+{
+    background-color: #777;
+    color: #fff;
+}
+.or
+{
+    color: #666666;
+    background-color: #ffffff;
+    position: absolute;
+    text-align: center;
+    top: -8px;
+    width: 40px;
+    left: 90px;
+}
+.account-box .btn:hover
+{
+    color: #fff;
+}

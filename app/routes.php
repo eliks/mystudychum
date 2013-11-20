@@ -29,3 +29,9 @@ Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
 Route::get('profile', array('uses'=>'ProfileController@get_index'));
 
 Route::get('create', array('uses'=>'CreateController@get_index'));
+
+Route::get('signin', array('uses'=>'SigninController@get_index'));
+
+Route::get('signup', array('uses'=>'SignupController@get_index'));
+
+Route::post('signup/submit', array('uses'=>'SignupController@submit'));
