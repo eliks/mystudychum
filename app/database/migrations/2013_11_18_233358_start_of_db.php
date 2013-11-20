@@ -12,7 +12,7 @@ class StartOfDb extends Migration {
 	public function up()
 	{
 		//
-		Schema::create('Chums', function($table){
+		Schema::create('chums', function($table){
 			$table->increments('id');
 			$table->integer('user_id');
 			$table->integer('chum_id');
@@ -28,7 +28,7 @@ class StartOfDb extends Migration {
 	public function down()
 	{
 		//
-		Schema::drop('Chums');
+		Schema::drop('chums');
 	}
 
 }

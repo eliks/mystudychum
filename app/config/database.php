@@ -68,7 +68,7 @@ return array(
 			'host'     => 'localhost',
 			'database' => 'database',
 			'username' => 'root',
-			'password' => 'james417',
+			'password' => '',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
