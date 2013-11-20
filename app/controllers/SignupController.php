@@ -18,5 +18,13 @@ class SignupController extends BaseController {
 		// echo Hash::make($fname);
 		
 		$user->save();
+		
+		if (Auth::attempt(array('email'=>$email, 'password'=>$pass))) {
+		   return Redirect::to('users/welcome')->with('message', 'You are now logged in!');
+		} else {
+		   return Redirect::to('users/login')
+		      ->with('message', 'Your username/password combination was incorrect')
+		      ->withInput();
+		}
 	} 
 }
