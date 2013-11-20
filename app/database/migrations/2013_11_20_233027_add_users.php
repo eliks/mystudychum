@@ -11,7 +11,41 @@ class AddUsers extends Migration {
 	 */
 	public function up()
 	{
-		//
+		DB::table('users')->insert(array(
+		'first_name'=>'elisha',
+		'last_name'=>'senoo',
+		'email'=>'eli@mest.com',
+		'gender'=>'MALE',
+		'created_at'=>date('Y-m-d H:m:s'),
+		'updated_at'=>date('Y-m-d H:m:s')
+		));
+		
+		DB::table('users')->insert(array(
+		'first_name'=>'elisha3',
+		'last_name'=>'senoo1',
+		'email'=>'senoo@gmail.com',
+		'gender'=>'MALE',
+		'created_at'=>date('Y-m-d H:m:s'),
+		'updated_at'=>date('Y-m-d H:m:s')
+		));
+		
+		DB::table('users')->insert(array(
+		'first_name'=>'elisha2',
+		'last_name'=>'senoo2',
+		'email'=>'elioo@gmail.com',
+		'gender'=>'MALE',
+		'created_at'=>date('Y-m-d H:m:s'),
+		'updated_at'=>date('Y-m-d H:m:s')
+		));
+		
+		DB::table('users')->insert(array(
+		'first_name'=>'elisha1',
+		'last_name'=>'senoo3',
+		'email'=>'elisha.senoo@meltwater.com',
+		'gender'=>'MALE',
+		'created_at'=>date('Y-m-d H:m:s'),
+		'updated_at'=>date('Y-m-d H:m:s')
+		));
 	}
 
 	/**
@@ -21,7 +55,10 @@ class AddUsers extends Migration {
 	 */
 	public function down()
 	{
-		//
+		DB::table('users')->where('first_name', '=', 'elisha')->delete();
+		DB::table('users')->where('first_name', '=', 'elisha3')->delete();
+		DB::table('users')->where('first_name', '=', 'elisha2')->delete();
+		DB::table('users')->where('first_name', '=', 'elisha1')->delete();
 	}
 
 }
