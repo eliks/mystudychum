@@ -2,6 +2,6 @@
 
 	class User extends Eloquent {
 	
-	    protected $table = 'my_users';
+	    // protected $table = 'my_users';
 	
 	}
