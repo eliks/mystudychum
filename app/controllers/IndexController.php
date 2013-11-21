@@ -4,13 +4,21 @@ class IndexController extends BaseController {
 	public $restful = true;
 	
 	public function get_index(){
-		if(Auth::check())
-            return View::make('Chums.index');
-		else return View::make('Index.index');
+		if(Auth::check()){
+			$tem_view = View::make('Chums.index');
+			$tem_view->message = 'You are signed in';
+            return $tem_view;
+		} else {
+			$tem_view = View::make('Index.index');
+			$tem_view->message = '';
+			return $tem_view;
+		}
 	} 
 	
 	public function get_logout() {
 	   Auth::logout();
-	   return Redirect::to('signin')->with('message', 'Your are now logged out!');
+	   $tem_view = Redirect::to('signin');
+	   $tem_view->message = 'Your are successfully logged out!';
+	   return $tem_view;
 	}
 }
