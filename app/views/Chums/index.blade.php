@@ -139,14 +139,17 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
-
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="/chums">Find Chums</a></li>
+
+				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
-				<li><a href="/profile">Profile</a></li>
+				<li class="active"><a href="/profile">Profile</a></li>
 				<li><a href="/forum">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
 				<li><a href="/activity">Activity</a></li>
+
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
 
 		</div>
