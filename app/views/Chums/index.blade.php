@@ -1,4 +1,4 @@
-<?php
+//<?php
 
 	// adding Google's user service
 	// require_once 'google/appengine/api/users/UserService.php';
@@ -62,7 +62,7 @@
 		// }
 // 		
     // }
-?>
+//?>
 
 <html>
 <head>
@@ -156,116 +156,115 @@
 				<h3></h3>
 				  <!-- <?php
 					// users are directed here when they accept the invitation
-					if (FALSE) {
+					//if (FALSE) {
 						
 
 						// creating a database instance
-						$db = new Database();
-						$db->connect();
-						$db->sql("SELECT * FROM Users WHERE EmailAddress='".$_GET['sender']."'");
-    					$res = $db->getResult();
+						//$db = new Database();
+						//$db->connect();
+						//$db->sql("SELECT * FROM Users WHERE EmailAddress='".$_GET['sender']."'");
+    					//$res = $db->getResult();
 
-    					echo "You are now connected to " . $res['FirstName'] . " " . $res['LastName'] . ".<br>";
-    					echo "Find and connect with people of like interests below.<br>";
+    					//echo "You are now connected to " . $res['FirstName'] . " " . $res['LastName'] . ".<br>";
+    					//echo "Find and connect with people of like interests below.<br>";
 
-    					$Chum_Id = $res['User_Id'];
-    					$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
-    					$res = $db->getResult();
-    					$User_Id = $res['User_Id'];
+    					//$Chum_Id = $res['User_Id'];
+    					//$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
+    					//$res = $db->getResult();
+    					//$User_Id = $res['User_Id'];
 
     					//inserting chum partnership into database
-    					$db->insert('Chums', array('User_Id' => $User_Id, 'chum_Id' => $Chum_Id));
-    					$db->insert('Chums', array('User_Id' => $Chum_Id, 'chum_Id' => $User_Id));
+    					//$db->insert('Chums', array('User_Id' => $User_Id, 'chum_Id' => $Chum_Id));
+    					//$db->insert('Chums', array('User_Id' => $Chum_Id, 'chum_Id' => $User_Id));
 
     					//getting current users details from the database
-    					$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
-    					$res = $db->getResult();
+    					//$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
+    					//$res = $db->getResult();
 
-				    	$message_body = $res["FirstName"] . " " . $res["LastName"] . " has accepted your chum request.\n";
-				    	$message_body .= "Click the link below to see your chums.\n";
-				    	$message_body .= "studychumapp.appspot.com/mychums";
+				    	//$message_body = $res["FirstName"] . " " . $res["LastName"] . " has accepted your chum request.\n";
+				    	//$message_body .= "Click the link below to see your chums.\n";
+				    	//$message_body .= "studychumapp.appspot.com/mychums";
 
 ;
 
-						try {
-						    $message = new Message($mail_options);
-						    $message->send();
-						} catch (InvalidArgumentException $e) {
-						    echo $e;
-						}
+						//try {
+						    //$message = new Message($mail_options);
+						    //$message->send();
+						//} catch (InvalidArgumentException $e) {
+						    //echo $e;
+						//}
     					
     					
-					}
-				?> -->
+					//}
+				//?> -->
 
 				<h3 class="profile-heading">Recommended chums</h3>
 				<!-- <?php
 
 					// instantiating database
-					$db = new Database();
-					$db->connect();
+					//$db = new Database();
+					//$db->connect();
 
 					//selecting all users
-					$db->sql('SELECT * FROM Users WHERE EmailAddress!="osborn.kwarteng.adu@meltwater.org" AND EmailAddress!="' . $email .'"');
-					$res = $db->getResult();
+					//$db->sql('SELECT * FROM Users WHERE EmailAddress!="osborn.kwarteng.adu@meltwater.org" AND EmailAddress!="' . $email .'"');
+					//$res = $db->getResult();
 
 
-					if (!empty($_POST['email'])) {
-    					$db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'" AND EmailAddress!="osborn.kwarteng.adu@meltwater.org"');
-						$res = $db->getResult();
+					//if (!empty($_POST['email'])) {
+    					//$db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'" AND EmailAddress!="osborn.kwarteng.adu@meltwater.org"');
+						//$res = $db->getResult();
 					    	
-					    }
+					    //}
 
-					foreach ($res as $chum) {
+					//foreach ($res as $chum) {
 						
-						$id = $chum["User_Id"];
+						//$id = $chum["User_Id"];
 
-						$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
-						$interests = $db->getResult();
+						//$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
+						//$interests = $db->getResult();
 						
-						echo '<div class="col-md-6 col-lg-6 col-sm-6">
+						<!-- echo '<div class="col-md-6 col-lg-6 col-sm-6">
 								<div class="row media chum-list">
 									<div class="col-md-3 col-lg-3 col-sm-3">
 										<a class="pull-left" href="#">
 											<img class="media-object" src="assets/img/profile.webp" alt="...">
 										</a>
 									</div>
-									<div class="col-md-9 col-lg-9 media-body">';
-
-						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
+									<div class="col-md-9 col-lg-9 media-body">'; -->
+						<!-- echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
 										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>
 										<p><b>Gender:<b> '.$chum['Gender'].'</p>
-										<p><b>Country:<b> '.$chum['Country'].'</p>';
+										<p><b>Country:<b> '.$chum['Country'].'</p>'; -->
 
 
 							// Displaying User's Interests
-							echo "<p><b>Interests:</b></p>";
+							//echo "<p><b>Interests:</b></p>";
 
-							foreach ($interests as $interest) {
-								echo "<span>" . $interest['Interest'] . " </span>";
-							}
+							//foreach ($interests as $interest) {
+								//echo "<span>" . $interest['Interest'] . " </span>";
+							//}
 								
 							
 						
 						
 
-						echo '			<br>
-										<form action="/chums" method="POST">
+						//echo '			<br>
+										<!-- <form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
 											<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
 										</form>
 									</div>	
 								</div>
-							</div>';
+							</div>'; -->
 						
-					}
+					//}
 
-					$db->disconnect();
+					//$db->disconnect();
 
-				?> -->
+				//?> -->
 			</div>
 
-			<div class="row pages">
+			<!-- <div class="row pages">
 				<ul class="pagination">
 					<li><a href="#">&laquo;</a></li>
 					<li><a href="#">1</a></li>
@@ -275,7 +274,7 @@
 					<li><a href="#">5</a></li>
 					<li><a href="#">&raquo;</a></li>
 				</ul>
-			</div>
+			</div> -->
 
 				
 		</div>
