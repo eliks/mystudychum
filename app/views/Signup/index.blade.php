@@ -68,7 +68,11 @@
 		                <div id="signintitle">
 		                	Sign up
 		                </div>
-		                <div>{{$message}}</div>
+		                <div>
+		                	@if(isset($message))
+		                		{{$message}}
+		                	@endif
+		                </div>
 		                <ul>
 					      @foreach($errors->all() as $error)
 					         <li>{{ $error }}</li>
