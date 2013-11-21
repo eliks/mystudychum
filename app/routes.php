@@ -13,6 +13,8 @@
 
 Route::get('/', array('uses'=>'IndexController@get_index'));
 
+Route::get('logout', array('uses'=>'IndexController@get_logout'));
+
 Route::get('/users', function()
 {
     return 'Users!';

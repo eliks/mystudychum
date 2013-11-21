@@ -5,7 +5,12 @@ class IndexController extends BaseController {
 	
 	public function get_index(){
 		if(Auth::check())
-            echo 'you are signed in';
+            return View::make('Chums.index');
 		else return View::make('Index.index');
 	} 
+	
+	public function get_logout() {
+	   Auth::logout();
+	   return Redirect::to('signin')->with('message', 'Your are now logged out!');
+	}
 }
