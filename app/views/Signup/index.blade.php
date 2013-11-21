@@ -69,7 +69,7 @@
 		                	Sign up
 		                </div>
 		                <div>
-		                	{{message}}
+		                	{{$message}}
 		                	@if(sizeof($errors) != 0)
 		                		{{'The following errors occurred:'}}
 		                	@endif

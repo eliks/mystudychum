@@ -187,13 +187,6 @@
 
 				//?> -->
 				
-				<p>Name: <em>Osborn Adu Kwateng</em></p>
-			    <p>Educational Level: Graduate</p>
-			    <p>Date of Birth: June 3, 1994</p>
-			    <p>Country: Ghana</p>
-			    <p>Gender: Male</p>
-
-				
 			</div>
 		</div>
 	</div>
