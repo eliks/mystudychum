@@ -32,7 +32,7 @@ class SigninController extends BaseController {
 				}
 		   } else {
 		      // validation has failed, display error messages 
-		      return Redirect::to('signin')
+		      return Redirect::to('signinvalidator')
 	      		->with('message', 'The following errors occurred')
 	      		->withErrors($validator)->withInput();  
 		   }
