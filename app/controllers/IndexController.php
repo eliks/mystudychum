@@ -4,6 +4,8 @@ class IndexController extends BaseController {
 	public $restful = true;
 	
 	public function get_index(){
-		return View::make('Index.index');
+		if(Auth::check())
+            echo 'you are signed in';
+		else return View::make('Index.index');
 	} 
 }
