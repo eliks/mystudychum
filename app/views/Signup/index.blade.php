@@ -92,7 +92,7 @@
 		                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required />
 		                </div>
 		                <div class="form-group">
-		                    <input type="password" name="confirm" id="confirm" class="form-control" placeholder="Confirm Password" required />
+		                    <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" placeholder="Confirm Password" required />
 		                </div>
 		                <button class="btn btn-lg btn-block purple-bg" type="submit">
 		                    Sign up</button>
