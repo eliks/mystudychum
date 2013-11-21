@@ -13,7 +13,7 @@ class SignupController extends BaseController {
 		$user->first_name = Input::get('fname');
 		$user->last_name = Input::get('lname');
 		$user->email = Input::get('email');
-		$user->password_hash = Input::get('pass');
+		$user->password = Input::get('pass');
 		$confirm = Input::get('confirm');
 		// echo Hash::make($fname);
 		
