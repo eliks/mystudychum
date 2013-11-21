@@ -80,10 +80,10 @@
 					   </ul>
 		                <form class="form-signin" action="signup/submit" method="post">
 		                <div class="form-group">
-		                    <input type="text" name="fname" id="fname" class="form-control" placeholder="First name" required autofocus />
+		                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First name" required autofocus />
 		                </div>
 		                <div class="form-group">
-		                    <input type="text" name="lname" id="lname" class="form-control" placeholder="Last name" required />
+		                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last name" required />
 		                </div>
 		                <div class="form-group">
 		                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" required />

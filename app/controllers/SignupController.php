@@ -14,10 +14,10 @@ class SignupController extends BaseController {
 	public function submit(){
 		$user = new User();
 		
-		$user->first_name = Input::get('fname');
-		$user->last_name = Input::get('lname');
+		$user->first_name = Input::get('first_name');
+		$user->last_name = Input::get('last_name');
 		$user->email = Input::get('email');
-		$user->password = Input::get('pass');
+		$user->password = Input::get('password');
 		$confirm = Input::get('confirm');
 
 		$validator = Validator::make(Input::all(), User::$rules);
