@@ -12,19 +12,21 @@ class SignupController extends BaseController {
 		
 		$user->first_name = Input::get('fname');
 		$user->last_name = Input::get('lname');
-		$email = Input::get('email');
-		$pass = Input::get('pass');
+		$user->email = Input::get('email');
+		$user->password_hash = Input::get('pass');
 		$confirm = Input::get('confirm');
 		// echo Hash::make($fname);
 		
-		$user->save();
+		// $user->save();
 		
-		if (Auth::attempt(array('email'=>$email, 'password'=>$pass))) {
-		   return Redirect::to('/')->with('message', 'You are now logged in!');
-		} else {
-		   return Redirect::to('signup')
-		      ->with('message', 'Your username/password combination was incorrect')
-		      ->withInput();
-		}
+		// if (Auth::attempt(array('email'=>$email, 'password'=>$pass))) {
+		   // return Redirect::to('/')->with('message', 'You are now logged in!');
+		// } else {
+		   // return Redirect::to('signup')
+		      // ->with('message', 'Your username/password combination was incorrect')
+		      // ->withInput();
+		// }
+		
+		echo $user->email, '<br/>', $user->password_hash;
 	} 
 }
