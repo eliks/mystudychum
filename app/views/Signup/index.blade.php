@@ -68,6 +68,12 @@
 		                <div id="signintitle">
 		                	Sign up
 		                </div>
+		                <div>{{message}}</div>
+		                <ul>
+					      @foreach($errors->all() as $error)
+					         <li>{{ $error }}</li>
+					      @endforeach
+					   </ul>
 		                <form class="form-signin" action="signup/submit" method="post">
 		                <div class="form-group">
 		                    <input type="text" name="fname" id="fname" class="form-control" placeholder="First name" required autofocus />
