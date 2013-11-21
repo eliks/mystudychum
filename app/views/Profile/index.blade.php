@@ -91,6 +91,9 @@
 
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
+				<li><a href="/profile">Profile</a></li>
+				<li><a href="/forum">Forum</a></li>
+				<li><a href="/groups">Groups</a></li>
 
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
@@ -183,8 +186,8 @@
 
 				//?> -->
 				
-				<p>Name: <em>Osborn Adu Kwateng</em></p>";
-			    <p>Educational Level: Graduate</p>";
+				<p>Name: <em>Osborn Adu Kwateng</em></p>
+			    <p>Educational Level: Graduate</p>
 			    <p>Date of Birth: June 3, 1994</p>
 			    <p>Country: Ghana</p>
 			    <p>Gender: Male</p>

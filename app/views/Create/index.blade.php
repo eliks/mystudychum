@@ -98,10 +98,10 @@
 				<!-- <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li> -->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@mest.org <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
+			          <!-- <li><a href=""></a></li> -->
 			        </ul>
 			      </li>
 
@@ -111,8 +111,18 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
-			
-		
+			<ul class="nav nav-pills nav-stacked">
+
+				<li><a href="/chums">Find Chums</a></li>
+				<li><a href="/my_chums">My Chums</a></li>
+				<li><a href="/profile">Profile</a></li>
+				<li><a href="/forum">Forum</a></li>
+				<li><a href="/groups">Groups</a></li>
+
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
+			</ul>
+
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
@@ -178,21 +188,21 @@
 							<div class="form-group" required>
 								<p>Country</p>
 								<select class="form-control" name="country">
-								<?php
+								// <?php
 								// Creating a new instance of the database
-								$db = new Database();
-								$db->connect();
-
-								$db->select('Countries'); // Table name
-								$res = $db->getResult();
+								// $db = new Database();
+								// $db->connect();
+// 
+								// $db->select('Countries'); // Table name
+								// $res = $db->getResult();
 
 								//displaying interests from the database
-								foreach ($res as $country) {
+								// foreach ($res as $country) {
 									
-										echo '<option value="' . $country["Name"] . '"> ' . $country["Name"] . '</option>';
-									}
+								//		echo '<option value="' . $country["Name"] . '"> ' . $country["Name"] . '</option>';
+								//	}
 								
-								?>
+								//?> 
 								</select>
 							</div>
 
