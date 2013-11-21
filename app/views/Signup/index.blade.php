@@ -68,7 +68,7 @@
 		                <div id="signintitle">
 		                	Sign up
 		                </div>
-		                <div>{{message}}</div>
+		                <div>{{$message}}</div>
 		                <ul>
 					      @foreach($errors->all() as $error)
 					         <li>{{ $error }}</li>
