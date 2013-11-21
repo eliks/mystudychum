@@ -69,8 +69,8 @@
 		                	Sign up
 		                </div>
 		                <div>
-		                	@if(isset($message))
-		                		{{$message}}
+		                	@if(isset($errors))
+		                		{{'The following errors occurred:'}}
 		                	@endif
 		                </div>
 		                <ul>

@@ -68,15 +68,25 @@
 		                <div id="signintitle">
 		                	Sign in
 		                </div>
+		                <div>
+		                	@if(isset($errors))
+		                		{{'The following errors occurred:'}}
+		                	@endif
+		                </div>
+		                <ul>
+					      @foreach($errors->all() as $error)
+					         <li>{{ $error }}</li>
+					      @endforeach
+					   </ul>
 		                <form class="form-signin" action="#">
 		                <div class="form-group">
-		                    <input type="text" class="form-control" placeholder="Email" required autofocus />
+		                    <input id="email" name="email" type="text" class="form-control" placeholder="Email" required autofocus />
 		                </div>
 		                <div class="form-group">
-		                    <input type="password" class="form-control" placeholder="Password" required />
+		                    <input id="password" name="password" type="password" class="form-control" placeholder="Password" required />
 		                </div>
 		                <label class="checkbox">
-		                    <input type="checkbox" value="remember-me" />
+		                    <input id="remember_me" name="remember_me" type="checkbox" value="remember-me" />
 		                    Keep me signed in
 		                </label>
 		                <button class="btn btn-lg btn-block purple-bg" type="submit">
