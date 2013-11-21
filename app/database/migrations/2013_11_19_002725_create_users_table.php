@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration {
 			$table->string('image_url');
 			$table->enum('gender', array('MALE', 'FEMALE'));
 			$table->integer('country_id');
-			$table->string('password_hash');
+			$table->string('password');
 			$table->timestamps();
 		});
 	}
