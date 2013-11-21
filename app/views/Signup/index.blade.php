@@ -89,7 +89,7 @@
 		                    <input type="text" name="email" id="email" class="form-control" placeholder="Email" required />
 		                </div>
 		                <div class="form-group">
-		                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required />
+		                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" required />
 		                </div>
 		                <div class="form-group">
 		                    <input type="password" name="confirm" id="confirm" class="form-control" placeholder="Confirm Password" required />
