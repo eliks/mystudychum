@@ -17,7 +17,7 @@ class SignupController extends BaseController {
 		$user->first_name = Input::get('first_name');
 		$user->last_name = Input::get('last_name');
 		$user->email = Input::get('email');
-		$user->password = Input::get('password');
+		$user->password = Hash::make(Input::get('password'));
 		$confirm = Input::get('password_confirmation');
 
 		$validator = Validator::make(Input::all(), User::$rules);
