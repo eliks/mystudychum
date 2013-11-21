@@ -1,83 +1,30 @@
-//<?php
+<!-- <?php
+	//include 'models/database.php';
+	//include 'classes/crud.php';
 
-	// adding Google's user service
-	// require_once 'google/appengine/api/users/UserService.php';
-
-	// adding google's mail service
-	//require_once 'google/appengine/api/mail/Message.php';
-
-	//use google\appengine\api\mail\Message;
+	// Google's user service
+	//require_once 'google/appengine/api/users/UserService.php';
 	//use google\appengine\api\users\User;
     //use google\appengine\api\users\UserService;
 
-    //require_once 'google/appengine/api/mail/MailService.php';
-    //use google\appengine\api\mail\MailService;
-
-    // creating a new instance of user
     //$user = UserService::getCurrentUser();
 
-     //if (!$user){
-    	
-    	//header('Location: ' .
-        //UserService::createLoginURL($_SERVER['REQUEST_URI']));
-    //}
+   
 
-    //$email = $user->getEmail();
-
-    // adding file that conatains database class
-	//include 'classes/crud.php';
-
-    // instantiating database object
-	//$db = new Database();
-    //$db->connect();
-
-
-    // getting email address data of current user from the database
-    // this info will be used in the message to the user
-    //$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
-    //$res = $db->getResult();
-    
-    
-    // processing studychum request form
-    //if (!empty($_POST['email'])) {
-
-    	//$subject = "You have received a chum request.";
-
-    	// $message_body = $res["FirstName"] . " " . $res["LastName"] . " has sent you a chum request.\n";
-    	// $message_body .= "Click the link below to accept request.\n";
-    	// $message_body .= "studychumapp.appspot.com/chums?sender=".$email."";
-// 
-		// $mail_options = [
-			// "sender" => 'studychumgh@gmail.com',
-			// "to" => $_POST['email'],
-			// "subject" => "You have received a chum request.",
-			// "textBody" => $message_body
-	// ];
-// 
-		// try {
-		    // $message = new Message($mail_options);
-		    // $message->send();
-		// } catch (InvalidArgumentException $e) {
-		    // echo $e;
-		// }
-// 		
-    // }
-//?>
+?> -->
 
 <html>
 <head>
-	<title>StudyChum - Your Activity</title>
+	<title>StudyChum - Your Profile</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		{{ HTML::style('/assets/css/index.css') }}
-        {{ HTML::style('/assets/css/index.css') }}
-        {{ HTML::style('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen')}}
-        {{ HTML::style('/assets/css/bs.min.css')}}
-        {{ HTML::style('/assets/css/app.css')}}
-        {{ HTML::style('assets/css/chums.css')}}
-        <link rel="shortcut icon" href="http://54.201.66.55/public/assets/img/favicon.ico">
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
+		<link rel="stylesheet" href="assets/css/bs.min.css">
+		<link rel="stylesheet" href="assets/css/app.css">
+		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -92,12 +39,13 @@
 			</button>
 			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
+			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			<ul class="nav navbar-nav">
+			<!-- <ul class="nav navbar-nav"> -->
 				<!-- <li class="active"><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
@@ -116,23 +64,23 @@
 						<div class="form-group">
 							<input type="text" class="form-control search-bar" placeholder="Search">
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" class="btn btn-default">Search</button>
 					</form>
     			</li> -->
-			</ul>
+			<!-- </ul> -->
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<!--li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
-				
+				<!--li><a href="#">Notifications <span class="badge">0</span></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
+
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@mest.org <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@gmail.com <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
 			          <li><a href="/logout">Log out</a></li>
 			        </ul>
-		      	</li>
+			      </li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -141,9 +89,9 @@
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 
-				<li><a href="/chums">Find Chums</a></li>
+				<li class="active"><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
-				<li class="active"><a href="/profile">Profile</a></li>
+				<li><a href="/profile">Profile</a></li>
 				<li><a href="/forum">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
 				<li><a href="/activity">Activity</a></li>
@@ -153,139 +101,105 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-9">
+		<div class="col-sm-10">
 			<div class="row">
-
-				<h3></h3>
-				  <!-- <?php
-					// users are directed here when they accept the invitation
-					//if (FALSE) {
-						
-
-						// creating a database instance
-						//$db = new Database();
-						//$db->connect();
-						//$db->sql("SELECT * FROM Users WHERE EmailAddress='".$_GET['sender']."'");
-    					//$res = $db->getResult();
-
-    					//echo "You are now connected to " . $res['FirstName'] . " " . $res['LastName'] . ".<br>";
-    					//echo "Find and connect with people of like interests below.<br>";
-
-    					//$Chum_Id = $res['User_Id'];
-    					//$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
-    					//$res = $db->getResult();
-    					//$User_Id = $res['User_Id'];
-
-    					//inserting chum partnership into database
-    					//$db->insert('Chums', array('User_Id' => $User_Id, 'chum_Id' => $Chum_Id));
-    					//$db->insert('Chums', array('User_Id' => $Chum_Id, 'chum_Id' => $User_Id));
-
-    					//getting current users details from the database
-    					//$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
-    					//$res = $db->getResult();
-
-				    	//$message_body = $res["FirstName"] . " " . $res["LastName"] . " has accepted your chum request.\n";
-				    	//$message_body .= "Click the link below to see your chums.\n";
-				    	//$message_body .= "studychumapp.appspot.com/mychums";
-
-;
-
-						//try {
-						    //$message = new Message($mail_options);
-						    //$message->send();
-						//} catch (InvalidArgumentException $e) {
-						    //echo $e;
-						//}
-    					
-    					
-					//}
-				//?> -->
-
-				<h3 class="profile-heading">Recommended chums</h3>
+				<h3 class="profile-heading">Recommended Chums</h3>
 				<!-- <?php
-
-					// instantiating database
-					//$db = new Database();
-					//$db->connect();
-
-					//selecting all users
-					//$db->sql('SELECT * FROM Users WHERE EmailAddress!="osborn.kwarteng.adu@meltwater.org" AND EmailAddress!="' . $email .'"');
-					//$res = $db->getResult();
-
-
-					//if (!empty($_POST['email'])) {
-    					//$db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'" AND EmailAddress!="osborn.kwarteng.adu@meltwater.org"');
-						//$res = $db->getResult();
-					    	
-					    //}
-
-					//foreach ($res as $chum) {
-						
-						//$id = $chum["User_Id"];
-
-						//$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
-						//$interests = $db->getResult();
-						
-						//echo '<div class="col-md-6 col-lg-6 col-sm-6">
-								  //<div class="row media chum-list">
-									//<div class="col-md-3 col-lg-3 col-sm-3">
-										//<a class="pull-left" href="#">
-											//<img class="media-object" src="assets/img/profile.webp" alt="...">
-										//</a>
-									//</div>
-									//<div class="col-md-9 col-lg-9 media-body">'; --> 
-						//<!-- echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
-										//<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>
-										//<p><b>Gender:<b> '.$chum['Gender'].'</p>
-										//<p><b>Country:<b> '.$chum['Country'].'</p>'; -->
-
-
-							// Displaying User's Interests
-							//echo "<p><b>Interests:</b></p>";
-
-							//foreach ($interests as $interest) {
-								//echo "<span>" . $interest['Interest'] . " </span>";
-							//}
-								
-							
-						
-						
-
-						//echo '			<br>
-										//<!-- <form action="/chums" method="POST">
-											//<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											//<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
-										//</form>
-									//</div>	
-								//</div>
-							//</div>'; -->
-						
+					// function to form input sanitise input
+					//function test_input($data)
+					//{
+					   //$data = trim($data);
+					   //$data = stripslashes($data);
+					   //$data = htmlspecialchars($data);
+					   //return $data;
 					//}
 
-					//$db->disconnect();
+					// getting users profile details from form
+					//if ($_SERVER["REQUEST_METHOD"] == "POST")
+					//{
+
+						//$gender = test_input($_POST["gender"]);
+
+						//$country = test_input($_POST["country"]);
+
+						//$fname = test_input($_POST["fname"]);
+						//$lname = test_input($_POST["lname"]);
+						//$dob = test_input($_POST["dob"]);
+						//$education = test_input($_POST["education"]);		
+
+						//$image = test_input($_POST["image"]);
+
+						//$email = $user->getEmail();
+
+					    // new instance of database
+						//$db = new Database();
+					    //$db->connect();
+
+					    //array to hold user details from form input
+					    //$new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
+
+					    // inserting data into database
+					    //$db->insert('Users', $new_user);
+
+					    // selecting last id from the database
+					    //$db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
+					    //$res = $db->getResult();
+					    //$id = $res[User_Id];
+
+					    // using the tags
+
+					    //$tags = $_POST["tags"];
+						//$interests = explode(",", $tags);
+
+						//foreach ($interests as $interest) {
+							//making first letter of interest capitl
+							//$formatted_interest = ucfirst(strtolower($interest));
+							//$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
+						//}
+
+					    //$db->disconnect();
+
+						//}
+
+										
+				    
+				    
+				    // displaying information about user 
+					//$db = new Database();
+				    //$db->connect();
+				    //$db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+				    //$res = $db->getResult();
+
+				    //echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
+				    //echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
+				    //echo "<p>Date of Birth: " . $res["DOB"];
+				    //echo "<p>Country: " . $res["Country"];
+				    //echo "<p>Gender: " . $res["Gender"];
+
+				    //$db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
+				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
+				    //$res = $db->getResult();
+
+				    //echo "<p><b>Interests:</b></p>";
+						//foreach ($res as $interest) {
+							//echo "<span>" . $interest['Interest'] . "</span>" . ",";
+						//}
 
 				//?> -->
-			</div>
-
-			<!-- <div class="row pages">
-				<ul class="pagination">
-					<li><a href="#">&laquo;</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">&raquo;</a></li>
-				</ul>
-			</div> -->
+				
+				<p>Name: <em>Osborn Adu Kwateng</em></p>
+			    <p>Educational Level: Graduate</p>
+			    <p>Date of Birth: June 3, 1994</p>
+			    <p>Country: Ghana</p>
+			    <p>Gender: Male</p>
 
 				
+			</div>
 		</div>
 	</div>
 
 	<script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
-	<script src="{{ URL::asset('assets/js/app.js') }}"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -296,15 +210,6 @@
 	  ga('send', 'pageview');
 
 	</script>
-	<script>
-	 	$(document).ready(function(){
-		  $("#chum_request").click(function(){
-		    $(this).html("Requested submited");
-		  });
-		});
-
-
-	</script>
-    <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
+	<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
 </body>
 </html>
