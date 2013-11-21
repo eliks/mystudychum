@@ -103,7 +103,7 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Your profile</h3>
+				<h3 class="profile-heading">Groups</h3>
 				<!-- <?php
 					// function to form input sanitise input
 					//function test_input($data)
@@ -186,13 +186,6 @@
 						//}
 
 				//?> -->
-				
-				<p>Name: <em>Osborn Adu Kwateng</em></p>
-			    <p>Educational Level: Graduate</p>
-			    <p>Date of Birth: June 3, 1994</p>
-			    <p>Country: Ghana</p>
-			    <p>Gender: Male</p>
-
 				
 			</div>
 		</div>
