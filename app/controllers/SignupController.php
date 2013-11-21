@@ -19,7 +19,9 @@ class SignupController extends BaseController {
 		
 		// $user->save();
 		
-		if (Auth::attempt(array('email'=>$user->email, 'password_hash'=>$user->password_hash))) {
+		$user_data = array('email'=>$user->email, 'password_hash'=>$user->password_hash);
+		
+		if (Auth::attempt($user_data)) {
 		   return Redirect::to('/')->with('message', 'You are now logged in!');
 		} else {
 		   return Redirect::to('signup')
