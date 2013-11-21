@@ -17,9 +17,9 @@ class SignupController extends BaseController {
 		$confirm = Input::get('confirm');
 		// echo Hash::make($fname);
 		
-		// $user->save();
+		$user->save();
 		
-		$user_data = array('email'=>$user->email, 'password_hash'=>$user->password_hash);
+		$user_data = array('email'=>Input::get('email'), 'password_hash'=>Input::get('pass'));
 		
 		if (Auth::attempt($user_data)) {
 		   return Redirect::to('/')->with('message', 'You are now logged in!');
