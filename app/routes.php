@@ -36,4 +36,4 @@ Route::get('signup', array('uses'=>'SignupController@get_index'));
 
 Route::post('signup/submit', array('uses'=>'SignupController@submit'));
 
-Route::post('signin/submit', array('uses'=>'SignupController@submit'));
+Route::post('signin/submit', array('uses'=>'SigninController@submit'));
