@@ -19,7 +19,7 @@ class SignupController extends BaseController {
 		
 		$user->save();
 		
-		$user_data = array('email'=>Input::get('email'), 'password_hash'=>Input::get('pass'));
+		$user_data = array('email'=>Input::get('email'), 'password'=>Input::get('pass'));
 		
 		if (Auth::attempt($user_data)) {
 		   return Redirect::to('/')->with('message', 'You are now logged in!');
