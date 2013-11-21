@@ -223,18 +223,18 @@
 						//$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
 						//$interests = $db->getResult();
 						
-						<!-- echo '<div class="col-md-6 col-lg-6 col-sm-6">
-								<div class="row media chum-list">
-									<div class="col-md-3 col-lg-3 col-sm-3">
-										<a class="pull-left" href="#">
-											<img class="media-object" src="assets/img/profile.webp" alt="...">
-										</a>
-									</div>
-									<div class="col-md-9 col-lg-9 media-body">'; -->
-						<!-- echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
-										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>
-										<p><b>Gender:<b> '.$chum['Gender'].'</p>
-										<p><b>Country:<b> '.$chum['Country'].'</p>'; -->
+						//echo '<div class="col-md-6 col-lg-6 col-sm-6">
+								  //<div class="row media chum-list">
+									//<div class="col-md-3 col-lg-3 col-sm-3">
+										//<a class="pull-left" href="#">
+											//<img class="media-object" src="assets/img/profile.webp" alt="...">
+										//</a>
+									//</div>
+									//<div class="col-md-9 col-lg-9 media-body">'; --> 
+						//<!-- echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
+										//<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>
+										//<p><b>Gender:<b> '.$chum['Gender'].'</p>
+										//<p><b>Country:<b> '.$chum['Country'].'</p>'; -->
 
 
 							// Displaying User's Interests
