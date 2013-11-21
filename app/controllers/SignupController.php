@@ -3,9 +3,9 @@
 class SignupController extends BaseController {
 	public $restful = true;
 	
-	public function __construct() {
-	   $this->beforeFilter('csrf', array('on'=>'post'));
-	}
+	// public function __construct() {
+	   // $this->beforeFilter('csrf', array('on'=>'post'));
+	// }
 	
 	public function get_index(){
 		return View::make('Signup.index');
