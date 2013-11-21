@@ -3,6 +3,14 @@
 class SignupController extends BaseController {
 	public $restful = true;
 	
+	public static $rules = array(
+	   'first_name'=>'required|alpha|min:2',
+	   'last_name'=>'required|alpha|min:2',
+	   'email'=>'required|email|unique:users',
+	   'password'=>'required|alpha_num|between:6,20|confirmed',
+	   'password_confirmation'=>'required|alpha_num|between:6,20'
+	   );
+	
 	// public function __construct() {
 	   // $this->beforeFilter('csrf', array('on'=>'post'));
 	// }
@@ -20,7 +28,7 @@ class SignupController extends BaseController {
 		$user->password = Hash::make(Input::get('password'));
 		$confirm = Input::get('password_confirmation');
 
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make(Input::all(), $this::$rules);
  
 	   if ($validator->passes()) {
 		      // validation has passed, save user in DB

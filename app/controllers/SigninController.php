@@ -3,16 +3,21 @@
 class SigninController extends BaseController {
 	public $restful = true;
 	
+	public static $rules = array(
+	   'email'=>'required|email|unique:users',
+	   'password'=>'required|alpha_num|between:6,20',
+	   );
+	
 	public function get_index(){
 		return View::make('Signin.index');
 	} 
 	
 	public function submit(){
 		
-		$user->email = Input::get('email');
-		$user->password = Hash::make(Input::get('password'));
+		// $user->email = Input::get('email');
+		// $user->password = Hash::make(Input::get('password'));
 
-		$validator = Validator::make(Input::all(), User::$rules);
+		$validator = Validator::make(Input::all(), $this::$rules);
  
 	   if ($validator->passes()) {
 			  
