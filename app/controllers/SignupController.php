@@ -3,14 +3,6 @@
 class SignupController extends BaseController {
 	public $restful = true;
 	
-	public static $rules = array(
-	   'first_name'=>'required|alpha|min:2',
-	   'last_name'=>'required|alpha|min:2',
-	   'email'=>'required|email|unique:users',
-	   'password'=>'required|alpha_num|between:6,12|confirmed',
-	   'confirm'=>'required|alpha_num|between:6,12'
-	   );
-	   
 	public function __construct() {
 	   $this->beforeFilter('csrf', array('on'=>'post'));
 	}
