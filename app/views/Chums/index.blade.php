@@ -249,13 +249,13 @@
 						
 
 						//echo '			<br>
-										<!-- <form action="/chums" method="POST">
-											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
-										</form>
-									</div>	
-								</div>
-							</div>'; -->
+										//<!-- <form action="/chums" method="POST">
+											//<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
+											//<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
+										//</form>
+									//</div>	
+								//</div>
+							//</div>'; -->
 						
 					//}
 
