@@ -4,7 +4,7 @@ class SigninController extends BaseController {
 	public $restful = true;
 	
 	public static $rules = array(
-	   'email'=>'required|email|unique:users',
+	   'email'=>'required|email',
 	   'password'=>'required|alpha_num|between:6,20',
 	   );
 	
@@ -13,9 +13,10 @@ class SigninController extends BaseController {
 	} 
 	
 	public function submit(){
+		$user = new User();
 		
-		// $user->email = Input::get('email');
-		// $user->password = Hash::make(Input::get('password'));
+		$user->email = Input::get('email');
+		$user->password = Hash::make(Input::get('password'));
 
 		$validator = Validator::make(Input::all(), $this::$rules);
  
