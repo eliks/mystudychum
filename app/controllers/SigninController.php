@@ -27,13 +27,13 @@ class SigninController extends BaseController {
 				if (Auth::attempt($user_data)) {
 				   return Redirect::to('/')->with('message', 'You are now logged in!');
 				} else {
-				   return Redirect::to('signincred')
+				   return Redirect::to('signin')
 				      ->with('message', 'Your username/password combination was incorrect')
 				      ->withInput();
 				}
 		   } else {
 		      // validation has failed, display error messages 
-		      return Redirect::to('signinvalid')
+		      return Redirect::to('signin')
 	      		->with('message', 'The following errors occurred')
 	      		->withErrors($validator)->withInput();  
 		   }
