@@ -37,10 +37,11 @@ class SignupController extends BaseController {
 			  $user_data = array('email'=>Input::get('email'), 'password'=>Input::get('password'));
 		
 				if (Auth::attempt($user_data)) {
-				   return Redirect::to('/')->with('message', 'You are now logged in!');
+					$tem_view = Redirect::to('profile');
+					$tem_view->message = 'You are now logged in!';
+					return $tem_view;
 				} else {
 				   return Redirect::to('signup')
-				      ->with('message', 'Your username/password combination was incorrect')
 				      ->withInput();
 				}
 		   } else {

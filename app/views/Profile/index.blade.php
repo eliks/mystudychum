@@ -1,13 +1,13 @@
 <!-- <?php
 	//include 'models/database.php';
-	include 'classes/crud.php';
+	//include 'classes/crud.php';
 
 	// Google's user service
-	require_once 'google/appengine/api/users/UserService.php';
-	use google\appengine\api\users\User;
-    use google\appengine\api\users\UserService;
+	//require_once 'google/appengine/api/users/UserService.php';
+	//use google\appengine\api\users\User;
+    //use google\appengine\api\users\UserService;
 
-    $user = UserService::getCurrentUser();
+    //$user = UserService::getCurrentUser();
 
    
 
@@ -45,7 +45,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			<ul class="nav navbar-nav">
+			<!-- <ul class="nav navbar-nav"> -->
 				<!-- <li class="active"><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
@@ -67,7 +67,7 @@
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
     			</li> -->
-			</ul>
+			<!-- </ul> -->
 
 
 			<ul class="nav navbar-nav navbar-right">
@@ -102,86 +102,86 @@
 				<h3 class="profile-heading">Your profile</h3>
 				<!-- <?php
 					// function to form input sanitise input
-					function test_input($data)
-					{
-					   $data = trim($data);
-					   $data = stripslashes($data);
-					   $data = htmlspecialchars($data);
-					   return $data;
-					}
+					//function test_input($data)
+					//{
+					   //$data = trim($data);
+					   //$data = stripslashes($data);
+					   //$data = htmlspecialchars($data);
+					   //return $data;
+					//}
 
 					// getting users profile details from form
-					if ($_SERVER["REQUEST_METHOD"] == "POST")
-					{
+					//if ($_SERVER["REQUEST_METHOD"] == "POST")
+					//{
 
-						$gender = test_input($_POST["gender"]);
+						//$gender = test_input($_POST["gender"]);
 
-						$country = test_input($_POST["country"]);
+						//$country = test_input($_POST["country"]);
 
-						$fname = test_input($_POST["fname"]);
-						$lname = test_input($_POST["lname"]);
-						$dob = test_input($_POST["dob"]);
-						$education = test_input($_POST["education"]);		
+						//$fname = test_input($_POST["fname"]);
+						//$lname = test_input($_POST["lname"]);
+						//$dob = test_input($_POST["dob"]);
+						//$education = test_input($_POST["education"]);		
 
-						$image = test_input($_POST["image"]);
+						//$image = test_input($_POST["image"]);
 
-						$email = $user->getEmail();
+						//$email = $user->getEmail();
 
 					    // new instance of database
-						$db = new Database();
-					    $db->connect();
+						//$db = new Database();
+					    //$db->connect();
 
 					    //array to hold user details from form input
-					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
+					    //$new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
 
 					    // inserting data into database
-					    $db->insert('Users', $new_user);
+					    //$db->insert('Users', $new_user);
 
 					    // selecting last id from the database
-					    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-					    $res = $db->getResult();
-					    $id = $res[User_Id];
+					    //$db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
+					    //$res = $db->getResult();
+					    //$id = $res[User_Id];
 
 					    // using the tags
 
-					    $tags = $_POST["tags"];
-						$interests = explode(",", $tags);
+					    //$tags = $_POST["tags"];
+						//$interests = explode(",", $tags);
 
-						foreach ($interests as $interest) {
+						//foreach ($interests as $interest) {
 							//making first letter of interest capitl
-							$formatted_interest = ucfirst(strtolower($interest));
-							$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
-						}
+							//$formatted_interest = ucfirst(strtolower($interest));
+							//$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
+						//}
 
-					    $db->disconnect();
+					    //$db->disconnect();
 
-						}
+						//}
 
 										
 				    
 				    
 				    // displaying information about user 
-					$db = new Database();
-				    $db->connect();
-				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
-				    $res = $db->getResult();
+					//$db = new Database();
+				    //$db->connect();
+				    //$db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+				    //$res = $db->getResult();
 
-				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
-				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
-				    echo "<p>Date of Birth: " . $res["DOB"];
-				    echo "<p>Country: " . $res["Country"];
-				    echo "<p>Gender: " . $res["Gender"];
+				    //echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
+				    //echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
+				    //echo "<p>Date of Birth: " . $res["DOB"];
+				    //echo "<p>Country: " . $res["Country"];
+				    //echo "<p>Gender: " . $res["Gender"];
 
-				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
+				    //$db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
 				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    $res = $db->getResult();
+				    //$res = $db->getResult();
 
-				    echo "<p><b>Interests:</b></p>";
-						foreach ($res as $interest) {
-							echo "<span>" . $interest['Interest'] . "</span>" . ",";
-						}
+				    //echo "<p><b>Interests:</b></p>";
+						//foreach ($res as $interest) {
+							//echo "<span>" . $interest['Interest'] . "</span>" . ",";
+						//}
 
-				?> -->
+				//?> -->
 				
 				<p>Name: <em>Osborn Adu Kwateng</em></p>";
 			    <p>Educational Level: Graduate</p>";
