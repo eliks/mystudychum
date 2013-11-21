@@ -78,7 +78,7 @@
 					         <li>{{ $error }}</li>
 					      @endforeach
 					   </ul>
-		                <form class="form-signin" action="#">
+		                <form class="form-signin" action="signin/submit">
 		                <div class="form-group">
 		                    <input id="email" name="email" type="text" class="form-control" placeholder="Email" required autofocus />
 		                </div>
