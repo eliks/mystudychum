@@ -92,8 +92,9 @@
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
 				<li><a href="/profile">Profile</a></li>
-				<li><a href="/forum">Forum</a></li>
-				<li><a href="/chums">Groups</a></li>
+				<li class="active"><a href="/forum">Forum</a></li>
+				<li><a href="/groups">Groups</a></li>
+				<li><a href="/activity">Activity</a></li>
 
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->

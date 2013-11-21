@@ -127,7 +127,7 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
 				
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">elisha.senoo@meltwater.org <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@mest.org <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
 			          <li><a href="/logout">Log out</a></li>
@@ -142,9 +142,11 @@
 
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="/chums">Find Chums</a></li>
-				<li><a href="/mychums">My Chums</a></li>
-				<!-- <li><a href="#">Calendar</a></li> -->
-				<!-- <li><a href="#">Settings</a></li> -->
+				<li><a href="/my_chums">My Chums</a></li>
+				<li><a href="/profile">Profile</a></li>
+				<li><a href="/forum">Forum</a></li>
+				<li><a href="/groups">Groups</a></li>
+				<li><a href="/activity">Activity</a></li>
 			</ul>
 
 		</div>
