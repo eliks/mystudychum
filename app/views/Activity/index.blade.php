@@ -103,7 +103,7 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Your profile</h3>
+				<h3 class="profile-heading">Chum Activity</h3>
 				<!-- <?php
 					// function to form input sanitise input
 					//function test_input($data)
