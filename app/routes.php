@@ -30,7 +30,7 @@ Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
 
 Route::get('profile', array('uses'=>'ProfileController@get_index'));
 
-Route::get('create', array('uses'=>'ProfileController@create'));
+Route::get('profile/edit', array('uses'=>'ProfileController@edit'));
 
 Route::get('groups', array('uses'=>'GroupsController@get_index'));
 

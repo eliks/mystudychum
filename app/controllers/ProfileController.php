@@ -7,7 +7,7 @@ class ProfileController extends BaseController {
 		return View::make('Profile.index');
 	} 
 	
-	public function create(){
-		return View::make('Profile.create');
+	public function edit(){
+		return View::make('Profile.edit');
 	} 
 }
