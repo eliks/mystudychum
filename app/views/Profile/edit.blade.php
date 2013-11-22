@@ -21,12 +21,12 @@
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
-		<link rel="stylesheet" href="assets/css/bs.min.css">
-		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/create.css">
-		<link rel="stylesheet" href="assets/css/bootstrap-tagsinput.css">
-		<link rel="stylesheet" href="assets/css/jasny-bootstrap.css">
-		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/bs.min.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/app.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/create.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap-tagsinput.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/jasny-bootstrap.css') }}">
+		<link rel="shortcut icon" href="{{ URL::asset('assets/img/favicon.ico') }}">
 </head>
 <body>
 
