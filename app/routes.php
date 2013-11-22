@@ -22,6 +22,8 @@ Route::get('/users', function()
 
 Route::get('chums', array('uses'=>'ChumsController@get_index'));
 
+Route::get('settings', array('uses'=>'SettingsController@get_index'));
+
 Route::get('activity', array('uses'=>'ActivityController@get_index'));
 
 Route::get('forum', array('uses'=>'ForumController@get_index'));

@@ -15,7 +15,7 @@
 
 <html>
 <head>
-	<title>StudyChum - Your Profile</title>
+	<title>StudyChum - Settings</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -89,7 +89,7 @@
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 
-				<li class="active"><a href="/chums">Find Chums</a></li>
+				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
 				<li><a href="/profile">Profile</a></li>
 				<li><a href="/forum">Forum</a></li>
@@ -103,7 +103,7 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Recommended Chums</h3>
+				<h3 class="profile-heading">Chum Settings</h3>
 				<!-- <?php
 					// function to form input sanitise input
 					//function test_input($data)
@@ -186,6 +186,13 @@
 						//}
 
 				//?> -->
+				
+				<!-- <p>Name: <em>Osborn Adu Kwateng</em></p>
+			    <p>Educational Level: Graduate</p>
+			    <p>Date of Birth: June 3, 1994</p>
+			    <p>Country: Ghana</p>
+			    <p>Gender: Male</p> -->
+
 				
 			</div>
 		</div>
