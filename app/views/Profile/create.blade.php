@@ -23,7 +23,9 @@
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/create.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-tagsinput.css">
+		<link rel="stylesheet" href="assets/css/jasny-bootstrap.css">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
