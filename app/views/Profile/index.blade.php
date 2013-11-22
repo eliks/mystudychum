@@ -104,6 +104,11 @@
 		<div class="col-sm-10">
 			<div class="row">
 				<h3 class="profile-heading">Your profile</h3>
+				<div class="form-group">
+					<p class="form-action">
+						<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="profile/edit">Edit Profile</a>
+					</p>
+				</div>
 				<!-- <?php
 					// function to form input sanitise input
 					//function test_input($data)
