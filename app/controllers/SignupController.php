@@ -38,6 +38,7 @@ class SignupController extends BaseController {
 		
 				if (Auth::attempt($user_data)) {
 					$tem_view = Redirect::to('profile');
+					$temp_view->user_email = Session::get('email');
 					$tem_view->message = 'You are now logged in!';
 					return $tem_view;
 				} else {

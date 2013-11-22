@@ -77,7 +77,7 @@
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$user_email}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
+			          <li><a href="/profile">Settings</a></li>
 			          <li><a href="/logout">Log out</a></li>
 			        </ul>
 			      </li>
