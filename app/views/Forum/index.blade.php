@@ -38,7 +38,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<a class="navbar-brand" href="/">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 

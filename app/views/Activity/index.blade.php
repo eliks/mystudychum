@@ -38,7 +38,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<a class="navbar-brand" href="/">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
@@ -75,7 +75,7 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$user_email}} <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Session::get('User')->email}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/settings">Settings</a></li>
 			          <li><a href="/logout">Log out</a></li>

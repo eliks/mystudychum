@@ -40,7 +40,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<a class="navbar-brand" href="/">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
@@ -108,6 +108,7 @@
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
 					<form class="form-horizontal" action="/profile" method="POST">
+						echo Form::model($user,array('url' => '/profile', 'files' => true))
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
