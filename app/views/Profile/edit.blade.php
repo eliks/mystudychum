@@ -39,7 +39,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
@@ -442,7 +442,7 @@
 
 	<script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
-	<script src="{{ URL::asset('assets/js/app.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/app.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/bootstrap-tagsinput.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/jasny-bootstrap.js') }}"></script>
 	<script>
