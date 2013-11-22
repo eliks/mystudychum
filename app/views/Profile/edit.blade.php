@@ -108,7 +108,6 @@
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
 					<form class="form-horizontal" action="/profile" method="POST">
-						{{ Form::model($user,array('url' => '/profile', 'files' => true)) }}
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>

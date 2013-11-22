@@ -69,9 +69,7 @@
 		                	Sign in
 		                </div>
 		                <div>
-		                	@if(isset($message))
-		                		{{$message}}
-		                	@endif
+		                	{{$message}}
 		                	@if(sizeof($errors) != 0)
 		                		{{'The following errors occurred:'}}
 		                	@endif
