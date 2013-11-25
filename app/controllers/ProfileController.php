@@ -55,7 +55,7 @@ class ProfileController extends BaseController {
 			    }
 			}
 		    
-			$profile_pic =  $str . '.' . Input::file('photo')->getClientOriginalExtension();
+			$profile_pic =  $str . '.' . Input::file('profile_image')->getClientOriginalExtension();
 		    Input::upload('profile_image', 'user_images/profile_pics', $profile_pic);
 			
 			$user_data = array(
