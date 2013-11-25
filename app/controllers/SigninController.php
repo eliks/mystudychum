@@ -19,7 +19,7 @@ class SigninController extends BaseController {
 		$user->email = Input::get('email');
 		$user->password = Hash::make(Input::get('password'));
 
-		$validator = Validator::make(Input::except('_token'), $this::$rules);
+		$validator = Validator::make(Input::all(), $this::$rules);
  
 	   if ($validator->passes()) {
 			  
@@ -27,7 +27,7 @@ class SigninController extends BaseController {
 		
 				if (Auth::attempt($user_data)) {
 					Session::put('email', $user->email);
-					$temp_view->user_email = $user->email;
+					$temp_view->user_email = Session::get('email');
 				   return Redirect::to('/')->with('message', 'You are now logged in!');
 				} else {
 				   
