@@ -104,25 +104,24 @@
 
 		</div>
 		<div class="col-sm-10">
+			<div>
+            	@if(sizeof($errors) != 0)
+            		{{'The following errors occurred:'}}
+            	@endif
+            </div>
+            <ul>
+		      @foreach($errors->all() as $error)
+		         <li>{{ $error }}</li>
+		      @endforeach
+		   </ul>
 			<div class="row">
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
-				<div>
-                	@if(sizeof($errors) != 0)
-                		{{'The following errors occurred:'}}
-                	@endif
-                </div>
-                <ul>
-			      @foreach($errors->all() as $error)
-			         <li>{{ $error }}</li>
-			      @endforeach
-			   </ul>
 				<form class="form-horizontal" action="/profile" method="POST">
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
-					    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="image"></span>
-					    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+					    <input name="profile_image" accept="image/*" />
 					  </div>
 					</div>
 				</div>

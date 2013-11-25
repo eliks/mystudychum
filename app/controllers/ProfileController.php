@@ -53,6 +53,9 @@ class ProfileController extends BaseController {
 		if ($validator->passes()) {
 			// validation has passed, save user in DB
 		    // $user->save();date("Y-m-d H:i:s")
+		    
+		    Input::upload('input_name', 'directory/to/save/file', 'filename.extension');
+			
 			DB::table('users')
             ->where('email', Session::get('email'))
             ->update($user_data);
