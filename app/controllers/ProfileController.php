@@ -32,7 +32,7 @@ class ProfileController extends BaseController {
 		$user->first_name = Input::get('first_name');
 		$user->last_name = Input::get('last_name');
 		$user->email = Input::get('email');
-		$user->DOB = Hash::make(Input::get('DOB'));
+		$user->DOB = Input::get('DOB');
 		$user->country_id = Input::get('country_id');
 		$user->education = Input::get('education');
 		$user->gender = Input::get('gender');
