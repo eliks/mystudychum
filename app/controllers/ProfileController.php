@@ -30,16 +30,6 @@ class ProfileController extends BaseController {
 		   'tags' => 'required'
 		   );
 		   
-		$user_data = array(
-					    'first_name'  => Input::get('first_name'),
-					    'last_name' => Input::get('last_name'),
-					    'email' => Input::get('email'),
-					    'DOB' => Input::get('DOB'),
-					    'country_id' => Input::get('country'),
-					    'education' => Input::get('education'),
-					    'gender' => Input::get('gender')
-						) ;
-							
 		// $user->first_name = Input::get('first_name');
 		// $user->last_name = Input::get('last_name');
 		// $user->email = Input::get('email');
@@ -54,7 +44,30 @@ class ProfileController extends BaseController {
 			// validation has passed, save user in DB
 		    // $user->save();date("Y-m-d H:i:s")
 		    
-		    Input::upload('input_name', 'directory/to/save/file', 'filename.extension');
+			//generate random string as profile image name
+			$length = 20; //random string length
+			$charset='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+		    $str = '';
+		    $count = strlen($charset);
+			while ($str == '' || DB::table('users')->where('image_url', $str)->first()) {
+			    while ($length--) {
+			        $str .= $charset[mt_rand(0, $count-1)];
+			    }
+			}
+		    
+			$profile_pic =  $str . '.' . Input::file('photo')->getClientOriginalExtension();
+		    Input::upload('profile_image', 'user_images/profile_pics', $profile_pic);
+			
+			$user_data = array(
+					    'first_name'  => Input::get('first_name'),
+					    'last_name' => Input::get('last_name'),
+					    'email' => Input::get('email'),
+					    'DOB' => Input::get('DOB'),
+					    'country_id' => Input::get('country'),
+					    'education' => Input::get('education'),
+					    'image_url' => $profile_pic,
+					    'gender' => Input::get('gender')
+						) ;
 			
 			DB::table('users')
             ->where('email', Session::get('email'))
