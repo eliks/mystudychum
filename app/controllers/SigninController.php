@@ -9,6 +9,7 @@ class SigninController extends BaseController {
 	   );
 	
 	public function get_index(){
+		Auth::logout();
 		return View::make('Signin.index');
 	} 
 	

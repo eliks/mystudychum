@@ -16,6 +16,7 @@ class SignupController extends BaseController {
 	// }
 	
 	public function get_index(){
+		Auth::logout();
 		return View::make('Signup.index');
 	} 
 	
