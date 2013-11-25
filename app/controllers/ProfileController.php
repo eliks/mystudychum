@@ -14,4 +14,8 @@ class ProfileController extends BaseController {
 		$temp_view->user_email = Session::get('email');
 		return $temp_view;
 	} 
+	
+	public function submit(){
+		echo 'wow';
+	} 
 }

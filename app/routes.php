@@ -32,6 +32,8 @@ Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
 
 Route::get('profile', array('uses'=>'ProfileController@get_index'));
 
+Route::post('profile', array('uses'=>'ProfileController@submit'));
+
 Route::get('profile/edit', array('uses'=>'ProfileController@edit'));
 
 Route::get('groups', array('uses'=>'GroupsController@get_index'));
