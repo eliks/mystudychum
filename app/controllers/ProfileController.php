@@ -35,7 +35,7 @@ class ProfileController extends BaseController {
 					    'last_name' => Input::get('last_name'),
 					    'email' => Input::get('email'),
 					    'DOB' => Input::get('DOB'),
-					    'country-id' => Input::get('country'),
+					    'country_id' => Input::get('country'),
 					    'education' => Input::get('education'),
 					    'gender' => Input::get('gender')
 						) ;
