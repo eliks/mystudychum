@@ -29,20 +29,33 @@ class ProfileController extends BaseController {
 		   'gender' => 'required|in:Male,Female',
 		   'tags' => 'required'
 		   );
-		
-		$user->first_name = Input::get('first_name');
-		$user->last_name = Input::get('last_name');
-		$user->email = Input::get('email');
-		$user->DOB = Input::get('DOB');
-		$user->country_id = Input::get('country_id');
-		$user->education = Input::get('education');
-		$user->gender = Input::get('gender');
+		   
+		$user_data = array(
+					    'first_name'  => Input::get('first_name'),
+					    'last_name' => Input::get('last_name'),
+					    'email' => Input::get('email'),
+					    'DOB' => Input::get('DOB'),
+					    'country' => Input::get('country'),
+					    'education' => Input::get('education'),
+					    'gender' => Input::get('gender')
+						) ;
+							
+		// $user->first_name = Input::get('first_name');
+		// $user->last_name = Input::get('last_name');
+		// $user->email = Input::get('email');
+		// $user->DOB = Input::get('DOB');
+		// $user->country_id = Input::get('country_id');
+		// $user->education = Input::get('education');
+		// $user->gender = Input::get('gender');
 
 		$validator = Validator::make(Input::all(), $rules);
 		
 		if ($validator->passes()) {
 			// validation has passed, save user in DB
-		    $user->save();
+		    // $user->save();date("Y-m-d H:i:s")
+			DB::table('users')
+            ->where('email', Session::get('email'))
+            ->update($user_data);
 			
 			return Redirect::to('profile');
 		} else {
