@@ -6,11 +6,11 @@ class ProfileController extends BaseController {
 	public static $rules = array(
 	   'first_name'=>'required|alpha|min:2',
 	   'last_name'=>'required|alpha|min:2',
-	   'email'=>'required|email|unique:users',
+	   'email'=>'required|email',
 	   'DOB'=>'required|date',
-	   'country_id' => 'required|integer',
+	   'country_id' => 'required',
 	   'education' => 'required|in:Other,High School,High School Graduate,College,College Graduate,',
-	   'gender' => 'required|in:MALE,FEMALE',
+	   'gender' => 'required|in:Male,Female',
 	   'tags' => 'required'
 	   );
 	
