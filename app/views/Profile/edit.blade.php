@@ -107,6 +107,16 @@
 			<div class="row">
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
+				<div>
+                	@if(sizeof($errors) != 0)
+                		{{'The following errors occurred:'}}
+                	@endif
+                </div>
+                <ul>
+			      @foreach($errors->all() as $error)
+			         <li>{{ $error }}</li>
+			      @endforeach
+			   </ul>
 				<form class="form-horizontal" action="/profile" method="POST">
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
@@ -123,23 +133,23 @@
 							<div class="row">
 								<div class="form-group col-md-6 fname">
 									<p>First Name<p>
-									<input type="text" name="fname" class="form-control fname" placeholder="First Name" required>
+									<input type="text" name="first_name" class="form-control fname" placeholder="First Name" required>
 								</div>
 								<div class="form-group col-md-6">
 									<p>Last Name<p>
-									<input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+									<input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="form-group col-md-5">
 									<p>Date of birth<p>
-									<input type="date" name="dob" class="form-control" required>
+									<input type="date" name="DOB" class="form-control" required>
 								</div>
 
 								<div class="form-group col-md-7">
 									<p>Location<p>
-									<input type="text" name="country" class="form-control countries" required>
+									<input type="text" name="country_id" class="form-control countries" required>
 								</div>
 							</div>
 
@@ -149,7 +159,6 @@
 									<option value="Other">Other</option>
 									<option value="High School">High School</option>
 									<option value="High School Graduate">High School Graduate</option>
-									<option value="Some College">Some College</option>
 									<option value="College">College</option>
 									<option value="College Graduate">College Graduate</option>
 								</select>
@@ -423,9 +432,6 @@
 								<p>Interests</p>
 								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add Interests" required>
 							</div>
-							
-
-							
 							
 							<br>
 							<div class="form-group">
