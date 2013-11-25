@@ -19,7 +19,7 @@ class SigninController extends BaseController {
 		$user->email = Input::get('email');
 		$user->password = Hash::make(Input::get('password'));
 
-		$validator = Validator::make(Input::all(), $this::$rules);
+		$validator = Validator::make(Input::except('_token'), $this::$rules);
  
 	   if ($validator->passes()) {
 			  
