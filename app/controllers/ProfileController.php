@@ -7,7 +7,7 @@ class ProfileController extends BaseController {
 	   'first_name'=>'required|alpha|min:2',
 	   'last_name'=>'required|alpha|min:2',
 	   'email'=>'required|email|unique:users',
-	   'DOB'=>'required|date_format',
+	   'DOB'=>'required|date',
 	   'country_id' => 'required|integer',
 	   'education' => 'required|in:Other,High School,High School Graduate,College,College Graduate,',
 	   'gender' => 'required|in:MALE,FEMALE',
