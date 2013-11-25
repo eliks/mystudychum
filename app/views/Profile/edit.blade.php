@@ -430,7 +430,7 @@
 							<br>
 							<div class="form-group">
 								<p class="form-action">
-									<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="/create">Save</a>
+									<button type="submit" class="press orange">Save</a>
 								</p>
 							</div>
 						</fieldset>
