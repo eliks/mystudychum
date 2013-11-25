@@ -81,7 +81,7 @@
 					         <li>{{ $error }}</li>
 					      @endforeach
 					   </ul>
-		                <form class="form-signin" action="signup/submit" method="post" enctype="multipart/form-data">
+		                <form class="form-signin" action="signup/submit" method="post">
 		                <div class="form-group">
 		                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First name" required autofocus />
 		                </div>
