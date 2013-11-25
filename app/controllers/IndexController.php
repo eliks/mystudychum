@@ -18,7 +18,7 @@ class IndexController extends BaseController {
 	
 	public function get_logout() {
 	   Auth::logout();
-	   $tem_view = Redirect::to('signin');
+	   $tem_view = Redirect::to('/');
 	   $tem_view->message = 'Your are successfully logged out!';
 	   return $tem_view;
 	}
