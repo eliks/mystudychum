@@ -121,7 +121,7 @@
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
-					    <input name="profile_image" accept="image/*" />
+					    <input name="profile_image" type="file" accept="image/*" />
 					  </div>
 					</div>
 				</div>
