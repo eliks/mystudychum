@@ -41,11 +41,6 @@ class SignupController extends BaseController {
 					$tem_view = Redirect::to('profile');
 					//Session::put('email');
 					Session::put('email', $user->email);
-					// $user = User::where("email",Session::get("email"))->get()->first();
-					// $data = array("user"=>$user);
-			
-					// return Redirect::to('Chums.index',$data);
-					
 					$user = User::where("email",Session::get("email"))->get()->first();
 					$data = array("user"=>$user);
 			

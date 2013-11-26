@@ -26,14 +26,16 @@ class SigninController extends BaseController {
 			  $user_data = array('email'=>Input::get('email'), 'password'=>Input::get('password'));
 		
 				if (Auth::attempt($user_data)) {
-					Session::put('email', $user->email);
+					// Session::put('email', $user->email);
+					// $temp_view->user_email = Session::get('email');
+					// $temp_view = Redirect::to('/')->with('message', 'You are now logged in!');
+				    // return $temp_view;
+				    
+				    Session::put('email', $user->email);
 					$user = User::where("email",Session::get("email"))->get()->first();
 					$data = array("user"=>$user);
-			
-					return Redirect::to('/',$data);
-					// $temp_view = Redirect::to('/')->with('user', DB::table('users')->where('email', Session::get('email'))->first());
-					// $temp_view['user'] = DB::table('users')->where('email', Session::get('email'))->first();
-				    // return $temp_view;
+
+					return View::make('/',$data);
 				   
 				} else {
 				   
