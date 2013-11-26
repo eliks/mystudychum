@@ -64,6 +64,7 @@ class ProfileController extends BaseController {
 			
 	        // $upload_success = Input::upload('profile_image', $directory, $filename);
 			Input::file('profile_image')->move(public_path().'/user_images/profile_pics', $str);
+			
 		    // Input::upload('profile_image', 'user_images/profile_pics', $profile_pic);
 			
 			$user_data = array(
@@ -75,7 +76,7 @@ class ProfileController extends BaseController {
 					    'education' => Input::get('education'),
 					    'image_url' => $profile_pic,
 					    'gender' => Input::get('gender')
-						) ;
+						);
 			
 			DB::table('users')
             ->where('email', Session::get('email'))
