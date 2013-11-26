@@ -21,7 +21,7 @@ Route::get('/users', function()
 });
 
 //Route::get('chums', array('uses'=>'ChumsController@get_index'));
-Route::get('chums', function(){ return View::make('Chums.index'); });
+Route::get('chums', function(){ return View::make('ChumsController.get_index'); });
 
 Route::get('settings', array('uses'=>'SettingsController@get_index'));
 
