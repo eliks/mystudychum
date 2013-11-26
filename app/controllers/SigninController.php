@@ -28,7 +28,7 @@ class SigninController extends BaseController {
 				if (Auth::attempt($user_data)) {
 					Session::put('email', $user->email);
 					$temp_view = Redirect::to('/')->with('message', 'You are now logged in!');
-					$temp_view->user_email = Session::get('email');
+					$temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 				    return $temp_view;
 				   
 				} else {

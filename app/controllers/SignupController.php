@@ -41,7 +41,7 @@ class SignupController extends BaseController {
 					$tem_view = Redirect::to('profile');
 					//Session::put('email');
 					Session::put('email', $user->email);
-					$temp_view->user_email = $user->email;
+					$temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 					$tem_view->message = 'You are now logged in!';
 					return $tem_view;
 				} else {
