@@ -122,7 +122,7 @@
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
-					  	{{Form::file('image')}}
+					  	{{Form::file('profile_image')}}
 					    <!-- <input name="profile_image" type="file" accept="image/*" /> -->
 					  </div>
 					</div>
