@@ -12,7 +12,7 @@ class IndexController extends BaseController {
 		} else {
 			Auth::logout();
 			$tem_view = View::make('Index.index');
-			$tem_view->message = '';
+			$tem_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 			return $tem_view;
 		}
 	} 
