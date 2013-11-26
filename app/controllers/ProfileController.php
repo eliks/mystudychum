@@ -56,7 +56,13 @@ class ProfileController extends BaseController {
 			}
 		    
 			// $profile_pic =  $str . '.' . Input::file('profile_image')->getClientOriginalName();
-			Input::file('profile_image')->move('user_images/profile_pics', $str);
+			$input = Input::all();
+       	    $extension = File::extension($input['profile_image']['name']);
+			$directory = path('public').'user_images/profile_pics';
+	        $filename = $str.".{$extension}";
+	 
+	        $upload_success = Input::upload('profile_image', $directory, $filename);
+			//Input::file('profile_image')->move('user_images/profile_pics', $str);
 		    // Input::upload('profile_image', 'user_images/profile_pics', $profile_pic);
 			
 			$user_data = array(
