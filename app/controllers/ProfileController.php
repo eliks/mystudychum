@@ -10,9 +10,14 @@ class ProfileController extends BaseController {
 	} 
 	
 	public function edit(){
-		$temp_view =  View::make('Profile.edit');
-		$temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
-		return $temp_view;
+		// $temp_view =  View::make('Profile.edit');
+		// $temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
+		// return $temp_view;
+		Session::put('email', $user->email);
+		$user = User::where("email",Session::get("email"))->get()->first();
+		$data = array("user"=>$user);
+
+		return View::make('Profile.edit',$data);
 	} 
 	
 	public function submit(){
@@ -82,7 +87,12 @@ class ProfileController extends BaseController {
             ->where('email', Session::get('email'))
             ->update($user_data);
 			
-			return Redirect::to('profile');
+			// return Redirect::to('profile');
+			Session::put('email', $user->email);
+			$user = User::where("email",Session::get("email"))->get()->first();
+			$data = array("user"=>$user);
+
+			return Redirect::to('profile',$data);
 		} else {
 		      // validation has failed, display error messages 
 		      return Redirect::to('profile/edit')
