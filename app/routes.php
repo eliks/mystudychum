@@ -20,8 +20,8 @@ Route::get('/users', function()
     return 'Users!';
 });
 
-//Route::get('chums', array('uses'=>'ChumsController@get_index'));
-Route::get('chums', function(){ return View::make('ChumsController.get_index'); });
+Route::get('chums', array('uses'=>'ChumsController@get_index'));
+// Route::get('chums', function(){ return View::make('ChumsController.get_index'); });
 
 Route::get('settings', array('uses'=>'SettingsController@get_index'));
 
