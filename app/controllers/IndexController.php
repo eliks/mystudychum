@@ -10,6 +10,7 @@ class IndexController extends BaseController {
 			// $tem_view->message = 'You are signed in';
             return $tem_view;
 		} else {
+			Auth::logout();
 			$tem_view = View::make('Index.index');
 			$tem_view->message = '';
 			return $tem_view;

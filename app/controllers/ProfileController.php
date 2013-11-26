@@ -5,13 +5,13 @@ class ProfileController extends BaseController {
 	
 	public function get_index(){
 		$temp_view =  View::make('Profile.index');
-		$temp_view->user_email = Session::get('email');
+		$temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 		return $temp_view;
 	} 
 	
 	public function edit(){
 		$temp_view =  View::make('Profile.edit');
-		$temp_view->user_email = Session::get('email');
+		$temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 		return $temp_view;
 	} 
 	
