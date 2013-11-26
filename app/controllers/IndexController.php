@@ -5,7 +5,7 @@ class IndexController extends BaseController {
 	
 	public function get_index(){
 		if(Auth::check()){
-			return $user = DB::table('users')->where('email', Session::get('email'))->first();
+			return $user = DB::table('users')->where('email', Session::get('email'))->first()->get();
 			$data = array("user"=>$user);
 			
 			return View::make('Chums.index',$data);
