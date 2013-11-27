@@ -30,6 +30,7 @@ class ProfileController extends BaseController {
 		$user = User::where("email",Session::get("email"))->get()->first();
 		
 		$rules = array(
+		   'profile_image'=>'required|image',
 		   'first_name'=>'required|alpha|min:2',
 		   'last_name'=>'required|alpha|min:2',
 		   'email'=>'required|email|unique:users,email,'.$user['id'],
@@ -95,7 +96,7 @@ class ProfileController extends BaseController {
 			$user = User::where("email",Session::get("email"))->get()->first();
 			$data = array("user"=>$user);
 			
-			return Redirect::to('profile', $data);
+			return View::make('profile', $data);
 		} else {
 		      // validation has failed, display error messages 
 		      return Redirect::to('profile/edit')
