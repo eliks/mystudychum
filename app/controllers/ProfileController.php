@@ -96,7 +96,7 @@ class ProfileController extends BaseController {
 			$user = User::where("email",Session::get("email"))->get()->first();
 			$data = array("user"=>$user);
 			
-			return View::make('profile.index', $data);
+			return View::make('Profile.index', $data);
 		} else {
 		      // validation has failed, display error messages 
 		      return Redirect::to('profile/edit')
