@@ -8,7 +8,7 @@ class IndexController extends BaseController {
 			$user = User::where("email",Session::get("email"))->get()->first();
 			$data = array("user"=>$user);
 			
-			return View::make('Chums.index',$data);
+			return View::make('Chums.index', $data);
 			//$tem_view->
 			// $temp_view->user_email = Session::get('email');
 			// $tem_view->message = 'You are signed in';
@@ -16,7 +16,7 @@ class IndexController extends BaseController {
 		} else {
 			Auth::logout();
 			$tem_view = View::make('Index.index');
-			$tem_view->user = DB::table('users')->where('email', Session::get('email'))->first();
+			// $tem_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 			return $tem_view;
 		}
 	} 
