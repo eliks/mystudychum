@@ -12,6 +12,13 @@ class CreateChumInterestsTable extends Migration {
 	public function up()
 	{
 		//
+		Schema::create('chum_interests', function($table)
+		{
+			$table->increments('id');
+			$table->integer('chum_id');
+			$table->integer('interest_id');
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,6 +29,7 @@ class CreateChumInterestsTable extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('chum_interests');
 	}
 
 }

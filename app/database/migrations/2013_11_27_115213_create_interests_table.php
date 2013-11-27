@@ -12,6 +12,12 @@ class CreateInterestsTable extends Migration {
 	public function up()
 	{
 		//
+		Schema::create('interests', function($table)
+		{
+			$table->increments('id');
+			$table->string('interest_name');
+			$table->timestamps();
+		});
 	}
 
 	/**
@@ -22,6 +28,7 @@ class CreateInterestsTable extends Migration {
 	public function down()
 	{
 		//
+		Schema::drop('interests');
 	}
 
 }
