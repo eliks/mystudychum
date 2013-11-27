@@ -87,7 +87,10 @@ class ProfileController extends BaseController {
             ->where('email', Session::get('email'))
             ->update($user_data);
 			
-			return Redirect::to('profile');
+			$user = User::where("email",Session::get("email"))->get()->first();
+			$data = array("user"=>$user);
+			
+			return Redirect::to('profile', $data);
 		} else {
 		      // validation has failed, display error messages 
 		      return Redirect::to('profile/edit')

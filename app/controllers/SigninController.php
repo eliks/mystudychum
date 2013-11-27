@@ -32,8 +32,8 @@ class SigninController extends BaseController {
 				    // return $temp_view;
 				    
 				    Session::put('email', $user->email);
-					$user = User::where("email",Session::get("email"))->get()->first();
-					$data = array("user"=>$user);
+					// $user = User::where("email",Session::get("email"))->get()->first();
+					// $data = array("user"=>$user);
 
 					return Redirect::to('/');
 				   

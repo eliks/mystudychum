@@ -38,13 +38,14 @@ class SignupController extends BaseController {
 			  $user_data = array('email'=>Input::get('email'), 'password'=>Input::get('password'));
 		
 				if (Auth::attempt($user_data)) {
-					$tem_view = Redirect::to('profile');
+					//$tem_view = Redirect::to('profile');
 					//Session::put('email');
 					Session::put('email', $user->email);
-					$user = User::where("email",Session::get("email"))->get()->first();
-					$data = array("user"=>$user);
+					//$user = User::where("email",Session::get("email"))->get()->first();
+					//$data = array("user"=>$user);
 			
-					return Redirect::to('Chums.index',$data);
+					// return Redirect::to('Chums.index',$data);
+					return Redirect::to('profile');
 					// $temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 					// $tem_view->message = 'You are now logged in!';
 					// return $tem_view;
