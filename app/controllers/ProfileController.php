@@ -4,16 +4,21 @@ class ProfileController extends BaseController {
 	public $restful = true;
 	
 	public function get_index(){
-		$temp_view =  View::make('Profile.index');
-		$temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
-		return $temp_view;
+		// $temp_view =  View::make('Profile.index');
+		// $temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
+		// Session::put('email', $user->email);
+		$user = User::where("email",Session::get("email"))->get()->first();
+		$data = array("user"=>$user);
+
+		return View::make('Profile.index',$data);
+		// return $temp_view;
 	} 
 	
 	public function edit(){
 		// $temp_view =  View::make('Profile.edit');
 		// $temp_view->user = DB::table('users')->where('email', Session::get('email'))->first();
 		// return $temp_view;
-		Session::put('email', $user->email);
+		// Session::put('email', $user->email);
 		$user = User::where("email",Session::get("email"))->get()->first();
 		$data = array("user"=>$user);
 
