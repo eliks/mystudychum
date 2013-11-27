@@ -35,7 +35,7 @@ class SigninController extends BaseController {
 					$user = User::where("email",Session::get("email"))->get()->first();
 					$data = array("user"=>$user);
 
-					return Redirect::to('/',$data);
+					return Redirect::to('/');
 				   
 				} else {
 				   
