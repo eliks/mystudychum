@@ -27,7 +27,7 @@ class ProfileController extends BaseController {
 	
 	public function submit(){
 		
-		$user = DB::table('users')->where('email', Session::get('email'))->get()->first();
+		$user = User::where("email",Session::get("email"))->get()->first();
 		
 		$rules = array(
 		   'first_name'=>'required|alpha|min:2',
