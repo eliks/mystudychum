@@ -24,7 +24,9 @@ Route::get('chums', array('uses'=>'ChumsController@get_index'));
 
 Route::get('activity', array('uses'=>'ActivityController@get_index'));
 
-Route::get('forum', array('uses'=>'ForumController@get_index'));
+Route::controller('forum', 'ForumController');
+
+Route::controller('forums', 'ForumsController');
 
 Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
 

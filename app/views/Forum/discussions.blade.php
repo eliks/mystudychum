@@ -8,10 +8,10 @@
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
-		<link rel="stylesheet" href="assets/css/bs.min.css">
-		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
-		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/bs.min.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/app.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/profile.css') }}">
+		<link rel="shortcut icon" href="{{ URL::asset('assets/img/favicon.ico') }}">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
@@ -32,7 +32,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			<!-- <ul class="nav navbar-nav"> -->
+			<ul class="nav navbar-nav">
 				<!-- <li class="active"><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
@@ -54,7 +54,7 @@
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
     			</li> -->
-			<!-- </ul> -->
+			</ul>
 
 
 			<ul class="nav navbar-nav navbar-right">
@@ -62,10 +62,10 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@gmail.com <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo "User"; ?> <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="/logout">Log out</a></li>
+			          <li><a href="">Log out</a></li>
 			        </ul>
 			      </li>
 			</ul>
@@ -77,52 +77,49 @@
 			<ul class="nav nav-pills nav-stacked">
 
 				<li><a href="/chums">Find Chums</a></li>
-				<li><a href="/my_chums">My Chums</a></li>
-				<li><a href="/profile">Profile</a></li>
-				<li class="active"><a href="/forums">Forum</a></li>
-				<li><a href="/groups">Groups</a></li>
-				<li><a href="/activity">Activity</a></li>
+				<li><a href="/mychums">My Chums</a></li>
 
-				<!-- <li><a href="#">Calendar</a></li> -->
+				<li><a href="/forums">Forum</a></li>
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
 
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">StudyChum Forums</h3>
-				<p><a class="press orange" href="forums/create/">Start a Discussion</a></p>
-				<br>
 
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Category</th>
-							<th>Number of Topics</th>
-						</tr>
-					</thead>
-					<tbody>
-						@foreach($categories as $category)
-							<tr>
-								<td>{{ ucfirst($category['name']) }}</td>
-								<td>{{ $category['topics'] }} topics</td>
-								
-								<!-- we will also add show, edit, and delete buttons -->
-								<td>
+					<h3> {{ $category}} </h3>
+					<p> {{ $subject }} </p>
+					<p>Started By: {{ $user }} </p>
+					<p> {{$time}} </p>
 
-									<!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
-									<!-- we will add this later since its a little more complicated than the other two buttons -->
-
-									<!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-									<a class="btn btn-small btn-success" href="{{ URL::to('forums/category/' . $category['id']) }}">View this Category</a>
-
-
-								</td>
-							</tr>
+					@if(count($posts)>0)
+						@foreach ($posts as $key => $value)
+							<div class="well well-sm">
+								<p>{{ $value->content}}<p>
+								<p>{{ User::find($value->user_id)->first_name}}<p>
+								<p>{{ $value->created_at}}<p>	
+							</div>
+							
 						@endforeach
-					</tbody>
-				</table>
+					@endif
 
+					<p>Contribute to Discussion<p>
+					<form class="form-horizontal" action="/forums/comment" method="POST">
+						<fieldset>
+							<div class="row">
+								<div class="form-group col-md-7">
+									
+									<textarea rows="4" cols="50" name="contribution" class="form-control" required></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<p class="form-action">
+									<input type="hidden" name="topic_id" value="{{ $topic_id }}">
+									<input type="submit" value="Submit" name="submit">
+								</p>
+							</div>
+						</fieldset>
+					</form>
 				
 				
 			</div>
@@ -141,6 +138,9 @@
 	  ga('send', 'pageview');
 
 	</script>
-	<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
+	<!-- start Dropifi --> 
+	<script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script>
+	<script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> 
+	<!-- end Dropifi -->
 </body>
 </html>

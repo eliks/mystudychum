@@ -8,10 +8,10 @@
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
-		<link rel="stylesheet" href="assets/css/bs.min.css">
-		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
-		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/bs.min.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/app.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/profile.css') }}">
+		<link rel="shortcut icon" href="{{ URL::asset('assets/img/favicon.ico') }}">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
@@ -79,7 +79,7 @@
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
 				<li><a href="/profile">Profile</a></li>
-				<li class="active"><a href="/forums">Forum</a></li>
+				<li class="active"><a href="/forum">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
 				<li><a href="/activity">Activity</a></li>
 
@@ -90,40 +90,33 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">StudyChum Forums</h3>
-				<p><a class="press orange" href="forums/create/">Start a Discussion</a></p>
-				<br>
-
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Category</th>
-							<th>Number of Topics</th>
-						</tr>
-					</thead>
-					<tbody>
-						@foreach($categories as $category)
-							<tr>
-								<td>{{ ucfirst($category['name']) }}</td>
-								<td>{{ $category['topics'] }} topics</td>
-								
-								<!-- we will also add show, edit, and delete buttons -->
-								<td>
-
-									<!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
-									<!-- we will add this later since its a little more complicated than the other two buttons -->
-
-									<!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-									<a class="btn btn-small btn-success" href="{{ URL::to('forums/category/' . $category['id']) }}">View this Category</a>
-
-
-								</td>
-							</tr>
-						@endforeach
-					</tbody>
-				</table>
-
+				<h3 class="profile-heading">Create a discussion</h3>
 				
+				<form class="form-horizontal" action="topicsave" method="POST">
+
+					<div class="col-md-5">
+					
+						<fieldset>
+							<div class="row">
+								<div class="form-group col-md-6 fname">
+									<p>Category<p>
+									<input type="text" name="name" class="form-control" placeholder="Category" required>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-group col-md-7">
+									<p>Discussion<p>
+									<textarea rows="4" cols="50" name="topic" class="form-control" required></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<p class="form-action">
+									<input type="submit" value="Submit">
+								</p>
+							</div>
+						</fieldset>
+					</form>
 				
 			</div>
 		</div>

@@ -10,6 +10,10 @@ class Category extends Eloquent
 	{
 		return $this->hasMany('Topic');
 	}
+
+	public static $rules = array(
+		'name' => 'required',
+		'topic'  => 'required');
 }
 
 ?>

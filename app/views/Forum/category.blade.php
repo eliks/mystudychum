@@ -8,10 +8,10 @@
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
-		<link rel="stylesheet" href="assets/css/bs.min.css">
-		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
-		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/bs.min.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/app.css') }}">
+		<link rel="stylesheet" href="{{ URL::asset('assets/css/profile.css') }}">
+		<link rel="shortcut icon" href="{{ URL::asset('assets/img/favicon.ico') }}">
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
@@ -90,39 +90,41 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">StudyChum Forums</h3>
-				<p><a class="press orange" href="forums/create/">Start a Discussion</a></p>
+				<h3 class="profile-heading">Forum</h3>
 				<br>
-
-				<table class="table">
+					<table class="table">
 					<thead>
 						<tr>
-							<th>Category</th>
-							<th>Number of Topics</th>
+							<th>Topic</th>
+							<th>Number of Contributions</th>
+							<th>Author</th>
+							<th>Date Started</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($categories as $category)
-							<tr>
-								<td>{{ ucfirst($category['name']) }}</td>
-								<td>{{ $category['topics'] }} topics</td>
-								
-								<!-- we will also add show, edit, and delete buttons -->
-								<td>
+						@foreach($topics as $topic)
+						<tr>
+							<td>{{ $topic['subject'] }}</td>
+							<td>{{ $topic['posts'] }}</td>
+							<td>{{ $topic['user'] }}</td>
+							<td>{{ $topic['date'] }}</td>
+							
+							<!-- we will also add show, edit, and delete buttons -->
+							<td>
 
-									<!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
-									<!-- we will add this later since its a little more complicated than the other two buttons -->
+								<!-- delete the nerd (uses the destroy method DESTROY /nerds/{id} -->
+								<!-- we will add this later since its a little more complicated than the other two buttons -->
 
-									<!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-									<a class="btn btn-small btn-success" href="{{ URL::to('forums/category/' . $category['id']) }}">View this Category</a>
+								<!-- show the nerd (uses the show method found at GET /nerds/{id} -->
+								<a class="btn btn-small btn-success" href="{{ URL::to('forums/topic/' . $topic['id']) }}">View this discussion</a>
 
 
-								</td>
-							</tr>
-						@endforeach
+							</td>
+						</tr>
+					
+				@endforeach
 					</tbody>
 				</table>
-
 				
 				
 			</div>
