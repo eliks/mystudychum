@@ -62,7 +62,7 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo "User"; ?> <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name." ".Auth::user()->last_name}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
 			          <li><a href="">Log out</a></li>
@@ -96,7 +96,7 @@
 						@foreach ($posts as $key => $value)
 							<div class="well well-sm">
 								<p>{{ $value->content}}<p>
-								<p>{{ User::find($value->user_id)->first_name}}<p>
+								<p>{{ User::find($value->user_id)->first_name. " ". User::find($value->user_id)->last_name}}<p>
 								<p>{{ $value->created_at}}<p>	
 							</div>
 							

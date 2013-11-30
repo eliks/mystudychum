@@ -35,20 +35,22 @@
 	    		$category_id;
 
 
-    		if (count($category_exists)>0) {
-    			$category_id = $category_exists->id;
-    		} else {
-    			$category = new Category;
-	    		$category->name = ucfirst($category_name);
-	    		$category->save();
+	    		if (count($category_exists)>0) {
+	    			$category_id = $category_exists->id;
+	    		} else {
+	    			$category = new Category;
+		    		$category->name = ucfirst($category_name);
+		    		$category->save();
 
-	    		$category_id = $category->id;
-    		}
+		    		$category_id = $category->id;
+	    		}	
+
+	    		$user = Auth::user();
 
 	    		$topic = new Topic;
 	    		$topic->subject = Input::get('topic');
 	    		$topic->category_id = $category_id;
-	    		$topic->user_id = 1;
+	    		$topic->user_id = $user->id;
 	    		$topic->save();
 
     			Session::flash('message', 'Successfully created category!');
@@ -59,7 +61,6 @@
 	    		//validation has failed, db2_field_display_size(stmt, column)y error message
 	    		return Redirect::to('forums/create')->with('message', 'The following error occured')->withErrors($validator)->withInput();
 	    	}
-
 		}
 
 		// save a comment
@@ -70,12 +71,35 @@
 
 			$validator = Validator::make(Input::all(), $rules);
 
+			$user = Auth::user();
+
 			if ($validator->passes()) {
 				$post = new Post;
 				$post->content = Input::get('contribution');
 				$post->topic_id = $topic_id;
-				$post->user_id = 1;
+				$post->user_id = $user->id;
 				$post->save();
+
+				// sending a mail to auther of topic when a contribution is given
+				$topic = Topic::find($topic_id);
+				$author_id = $topic->user_id;
+				$author = User::find($author_id);
+
+				$contributor = User::find($post->user_id);
+
+				$user = array(
+					'email' => $author->email, 
+					'name' => $author->first_name . " " . $author->last_name,
+					'contributor' => $contributor->first_name . " " . $contributor->last_name
+					);
+
+				$data = array('detail' => 'The link will come here.', 
+					'name' => $user['name']);
+
+				Mail::send('emails.welcome', $data, function($message) use ($user)
+				{	
+				    $message->to($user['email'], $user['name'])->subject($user['contributor'].' has added a comment to your discussion.');
+				});
 				
 				return Redirect::to('forums/topic/'.$topic_id);
 			} else {
@@ -93,7 +117,13 @@
 			foreach ($topics as $key => $value) {
 				$posts = Post::where('topic_id', $value->id)->get();
 				$user = User::find($value->user_id);
-	        	$array[] = array('category' => $category->name, 'subject' => $value->subject, 'id' => $value->id, 'date' => $value->created_at, 'posts' => count($posts), 'user' => $user->first_name);
+	        	$array[] = array(
+	        		'category' => $category->name, 
+	        		'subject' => $value->subject, 
+	        		'id' => $value->id, 
+	        		'date' => $value->created_at, 
+	        		'posts' => count($posts), 
+	        		'user' => $user->first_name . " " . $user->last_name);
 			}
 
 			return View::make('Forum.category')->with('topics', $array);
@@ -103,11 +133,12 @@
 		public function getTopic($id){
 			$topic = Topic::find($id);
 			$category_name = Category::find($topic->category_id)->name;
+			$user = User::find($topic->user_id);
 
 			$discussion = array(
 	    			'category' => $category_name, 
 	    			'subject' => $topic->subject,
-	    			'user' => User::find($topic->user_id)->first_name,
+	    			'user' => $user->first_name . " " . $user->last_name,
 	    			'time' => $topic->created_at,
 	    			'topic_id' => $topic->id,
 	    			'posts'=> Post::where('topic_id', $id)->get());

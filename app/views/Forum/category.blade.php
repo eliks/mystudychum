@@ -62,7 +62,7 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@gmail.com <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name." ".Auth::user()->last_name}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
 			          <li><a href="/logout">Log out</a></li>
@@ -90,7 +90,7 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Forum</h3>
+				<h3 class="profile-heading">{{ ucfirst($topics[0]['category']) }}</h3>
 				<br>
 					<table class="table">
 					<thead>
