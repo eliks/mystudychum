@@ -5,7 +5,8 @@ class IndexController extends BaseController {
 	
 	public function get_index(){
 		if(Auth::check()){
-			$tem_view = View::make('Chums.index');
+			$users = User::all();
+			$tem_view = View::make('Chums.index')->with('users', $users);
 			$tem_view->message = 'You are signed in';
             return $tem_view;
 		} else {
