@@ -34,7 +34,7 @@ class SigninController extends BaseController {
 				    Session::put('email', $user->email);
 					// $user = User::where("email",Session::get("email"))->get()->first();
 					// $data = array("user"=>$user);
-					$users = Users::all()->get();
+					$users = User::all()->get();
 					$user = User::where("email",Session::get("email"))->get()->first();
 					$data = array("user"=>$user,"users"=>$users);
 					return Redirect::to('Chums.index',$data);
