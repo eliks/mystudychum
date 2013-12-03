@@ -92,7 +92,7 @@
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
 				<li class="active"><a href="/profile">Profile</a></li>
-				<li><a href="/forum">Forum</a></li>
+				<li><a href="forums">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
 				<li><a href="/activity">Activity</a></li>
 

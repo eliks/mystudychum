@@ -1,17 +1,4 @@
-<!-- <?php
-	//include 'models/database.php';
-	//include 'classes/crud.php';
 
-	// Google's user service
-	//require_once 'google/appengine/api/users/UserService.php';
-	//use google\appengine\api\users\User;
-    //use google\appengine\api\users\UserService;
-
-    //$user = UserService::getCurrentUser();
-
-   
-
-?> -->
 
 <html>
 <head>
@@ -75,7 +62,11 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
+<<<<<<< HEAD
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$user['email']}} <b class="caret"></b></a>
+=======
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name." ".Auth::user()->last_name}} <b class="caret"></b></a>
+>>>>>>> 45fcb01c2184d45de4df7212811f1bc73115b095
 			        <ul class="dropdown-menu">
 			          <li><a href="/settings">Settings</a></li>
 			          <li><a href="/logout">Log out</a></li>
@@ -86,6 +77,7 @@
 	</nav>
 
 	<div class="main-body">
+
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 
@@ -99,93 +91,67 @@
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
-
 		</div>
-		<div class="col-sm-10">
+
+		<div class="col-sm-9">
 			<div class="row">
 				<h3 class="profile-heading">Recommended Chums</h3>
-				<!-- <?php
-					// function to form input sanitise input
-					//function test_input($data)
-					//{
-					   //$data = trim($data);
-					   //$data = stripslashes($data);
-					   //$data = htmlspecialchars($data);
-					   //return $data;
-					//}
+				<!-- Button trigger modal -->
+					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					  Click here to filter the chums you want to meet.
+					</button>
 
-					// getting users profile details from form
-					//if ($_SERVER["REQUEST_METHOD"] == "POST")
-					//{
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					        <h4 class="modal-title" id="myModalLabel">Filter Chums</h4>
+					      </div>
+					      <div class="modal-body">
+					       
+					        <form role="form">
+					        	Gender:
+					        	<div class="checkbox">
+								  <label>
+								    <input type="checkbox" value="">
+								    Male
+								  </label>
+								</div>
+					        </form>
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+					      </div>
+					    </div><!-- /.modal-content -->
+					  </div><!-- /.modal-dialog -->
+					</div><!-- /.modal -->
 
-						//$gender = test_input($_POST["gender"]);
+					<br>
+				
+				@foreach($users as $user)
+					<br>
+					<div class="col-md-6 col-lg-6 col-sm-6">
+						<div class="row media chum-list">
+							
 
-						//$country = test_input($_POST["country"]);
-
-						//$fname = test_input($_POST["fname"]);
-						//$lname = test_input($_POST["lname"]);
-						//$dob = test_input($_POST["dob"]);
-						//$education = test_input($_POST["education"]);		
-
-						//$image = test_input($_POST["image"]);
-
-						//$email = $user->getEmail();
-
-					    // new instance of database
-						//$db = new Database();
-					    //$db->connect();
-
-					    //array to hold user details from form input
-					    //$new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
-
-					    // inserting data into database
-					    //$db->insert('Users', $new_user);
-
-					    // selecting last id from the database
-					    //$db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-					    //$res = $db->getResult();
-					    //$id = $res[User_Id];
-
-					    // using the tags
-
-					    //$tags = $_POST["tags"];
-						//$interests = explode(",", $tags);
-
-						//foreach ($interests as $interest) {
-							//making first letter of interest capitl
-							//$formatted_interest = ucfirst(strtolower($interest));
-							//$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
-						//}
-
-					    //$db->disconnect();
-
-						//}
-
-										
-				    
-				    
-				    // displaying information about user 
-					//$db = new Database();
-				    //$db->connect();
-				    //$db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
-				    //$res = $db->getResult();
-
-				    //echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
-				    //echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
-				    //echo "<p>Date of Birth: " . $res["DOB"];
-				    //echo "<p>Country: " . $res["Country"];
-				    //echo "<p>Gender: " . $res["Gender"];
-
-				    //$db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
-				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    //$res = $db->getResult();
-
-				    //echo "<p><b>Interests:</b></p>";
-						//foreach ($res as $interest) {
-							//echo "<span>" . $interest['Interest'] . "</span>" . ",";
-						//}
-
-				//?> -->
+							<div class="col-md-9 col-lg-9 media-body">
+								<h4 class="media-heading"><em>{{ $user->first_name ." " . $user->last_name }}</em></h4>
+								<p><b>Gender:<b>{{ $user->gender }}</p>
+								<p> <b>Educational Level:</b> </p>
+								<p><b>Gender:<b></p>
+								<p><b>Country:<b></p>
+								
+								<form action="chums/connect" method="POST">
+									<input type="hidden" name="email" value="{{ $user->email }}">
+									<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
+								</form>
+							</div>	
+						</div>
+					</div>
+				@endforeach
 				
 			</div>
 		</div>
