@@ -17,6 +17,7 @@ class AddUsers extends Migration {
 		'password'=>Hash::make('james111'),
 		'email'=>'eli@mest.com',
 		'gender'=>'MALE',
+		'country_id'=>'85',
 		'created_at'=>date('Y-m-d H:m:s'),
 		'updated_at'=>date('Y-m-d H:m:s')
 		));
@@ -27,6 +28,7 @@ class AddUsers extends Migration {
 		'password'=>Hash::make('james222'),
 		'email'=>'senoo@gmail.com',
 		'gender'=>'MALE',
+		'country_id'=>'85',
 		'created_at'=>date('Y-m-d H:m:s'),
 		'updated_at'=>date('Y-m-d H:m:s')
 		));
@@ -37,6 +39,7 @@ class AddUsers extends Migration {
 		'password'=>Hash::make('james333'),
 		'email'=>'elioo@gmail.com',
 		'gender'=>'MALE',
+		'country_id'=>'85',
 		'created_at'=>date('Y-m-d H:m:s'),
 		'updated_at'=>date('Y-m-d H:m:s')
 		));
@@ -47,6 +50,7 @@ class AddUsers extends Migration {
 		'password'=>Hash::make('james111'),
 		'email'=>'elisha.senoo@meltwater.com',
 		'gender'=>'MALE',
+		'country_id'=>'85',
 		'created_at'=>date('Y-m-d H:m:s'),
 		'updated_at'=>date('Y-m-d H:m:s')
 		));

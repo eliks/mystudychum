@@ -79,8 +79,8 @@
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$user['email']}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/settings">Settings</a></li>
-			          <li><a href="/logout">Log out</a></li>
+			          <li><a href="settings">Settings</a></li>
+			          <li><a href="logout">Log out</a></li>
 			        </ul>
 			      </li>
 			</ul>
@@ -91,12 +91,12 @@
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 
-				<li><a href="/chums">Find Chums</a></li>
-				<li><a href="/my_chums">My Chums</a></li>
-				<li class="active"><a href="/profile">Profile</a></li>
-				<li><a href="/forum">Forum</a></li>
-				<li><a href="/groups">Groups</a></li>
-				<li><a href="/activity">Activity</a></li>
+				<li><a href="chums">Find Chums</a></li>
+				<li><a href="my_chums">My Chums</a></li>
+				<li class="active"><a href="profile">Profile</a></li>
+				<li><a href="forum">Forum</a></li>
+				<li><a href="groups">Groups</a></li>
+				<li><a href="activity">Activity</a></li>
 
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
@@ -122,7 +122,7 @@
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
-					  	{{Form::file('profile_image')}}
+					  	{{Form::file('profile_image',array('value'=>'/public/user_images/profile_pics/'.Auth::user()->image_url))}}
 					    <!-- <input name="profile_image" type="file" accept="image/*" /> -->
 					  </div>
 					</div>
@@ -134,55 +134,75 @@
 							<div class="row">
 								<div class="form-group col-md-6 fname">
 									<p>First Name<p>
-									<input type="text" name="first_name" class="form-control fname" placeholder="First Name" required>
+									<!-- <input type="text" name="first_name" class="form-control fname" placeholder="First Name" required> -->
+									{{ Form::text('first_name', $value = Auth::user()->first_name, $attributes = array('class' => 'form-control', 'placeholder'=>'First Name')) }}
 								</div>
 								<div class="form-group col-md-6">
 									<p>Last Name<p>
-									<input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+									<!-- <input type="text" name="last_name" class="form-control" placeholder="Last Name" required> -->
+									{{ Form::text('last_name', $value = Auth::user()->last_name, $attributes = array('class' => 'form-control', 'placeholder'=>'Last Name')) }}
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="form-group col-md-5">
 									<p>Date of birth<p>
-									<input type="date" name="DOB" class="form-control" required>
+									<!-- <input type="date" name="DOB" class="form-control" required> -->
+								<?php
+									Form::macro('date', function($name, $value = null, $options = array()) {
+									    $input =  '<input type="date" name="' . $name . '" value="' . $value . '"';
+									
+									    foreach ($options as $key => $value) {
+									        $input .= ' ' . $key . '="' . $value . '"';
+									    }
+									
+									    $input .= '>';
+									
+									    return $input;
+									});
+								?>
+									{{ Form::date($name="DOB",$value = Auth::user()->DOB, $options = array("class"=>"form-control")) }}
 								</div>
 
 								<div class="form-group col-md-7">
 									<p>Location<p>
-									<input type="text" name="country_id" class="form-control countries" required>
+									<!-- <input type="text" name="country_id" class="form-control countries" required> -->
+									{{ Form::text('location', $value = Auth::user()->last_name, $attributes = array('class' => 'form-control location', 'placeholder'=>'Location')) }}
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="form-group col-md-6">
 									<p>Email<p>
-									<input type="text" name="email" class="form-control" required>
+									<!-- <input type="text" name="email" class="form-control" required> -->
+									{{ Form::email('email', $value = Auth::user()->email, $attributes = array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group  col-md-6" required>
 									<p>Education level</p>
-									<select class="form-control" name="education">
+									<!-- <select class="form-control" name="education">
 										<option value="Other">Other</option>
 										<option value="High School">High School</option>
 										<option value="High School Graduate">High School Graduate</option>
 										<option value="College">College</option>
 										<option value="College Graduate">College Graduate</option>
-									</select>
+									</select> -->
+									{{ Form::select('education', array("High School"=>"High School","High School Graduate"=>"High School Graduate","College"=>"College","College Graduate"=>"College Graduate","Other"=>"Other"), 1, array('class' => 'form-control')) }}
 								</div>
 							</div>
 
 							<div class="form-group" required>
 								<p>Gender</p>
-								<select class="form-control" name="gender">
+								<!-- <select class="form-control" name="gender">
 									<option value="Male">Male</option>
 									<option value="Female">Female</option>
-								</select>
+								</select> -->
+								{{ Form::select('gender', array("Male"=>"Male","Female"=>"Female"), 1, array('class' => 'form-control')) }}
 							</div>
 
 
 							<div class="form-group" required>
 								<p>Country</p>
-								<select class="form-control" name="country">
+								<!-- <select class="form-control" name="country">
 										<option value="1">Afghanistan</option>
 										<option value="2">Åland Islands</option>
 										<option value="3">Albania</option>
@@ -200,12 +220,14 @@
 										<option value="15">Austria</option>
 										<option value="16">Azerbaijan</option>
 										<option value="17">Bahamas</option>
-								</select>
+								</select> -->
+								{{ Form::select('country_id', $countries, 58, array('class' => 'form-control')) }}
 							</div>
 
 							<div class="form-group" required>
 								<p>Interests</p>
-								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add Interests" required>
+								<!-- <input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add Interests" required> -->
+								{{ Form::text('tags', $value = Auth::user()->interests, $attributes = array('class' => 'form-control location', 'placeholder'=>'Add Interests (seperated by comma)',"data-role"=>"tagsinput")) }}
 							</div>
 							
 							<br>
