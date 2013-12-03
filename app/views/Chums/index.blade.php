@@ -62,11 +62,7 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-<<<<<<< HEAD
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{$user['email']}} <b class="caret"></b></a>
-=======
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name." ".Auth::user()->last_name}} <b class="caret"></b></a>
->>>>>>> 45fcb01c2184d45de4df7212811f1bc73115b095
 			        <ul class="dropdown-menu">
 			          <li><a href="/settings">Settings</a></li>
 			          <li><a href="/logout">Log out</a></li>
