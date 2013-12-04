@@ -127,7 +127,7 @@
 
 					<br>
 				
-				@foreach($users as $user)
+				@foreach($data['users'] as $user)
 					<br>
 					<div class="col-md-6 col-lg-6 col-sm-6">
 						<div class="row media chum-list">
