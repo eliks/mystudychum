@@ -196,7 +196,7 @@
 				</div>
 				<p>Name: <em>{{Auth::user()->first_name. ' '.Auth::user()->last_name}}</em></p>
 			    <p>Educational Level: {{Auth::user()->education}}</p><?php  $today = new DateTime(); ?>
-			    <p>Age: {{$today->diff(new DateTime(Auth::user()->DOB))->y}}</p>
+			    <p>Age: {{$today->diff(new DateTime(Auth::user()->DOB))->y.' years'}}</p>
 			    <p>Country: {{Auth::user()->country}}</p>
 			    <p>Gender: {{Auth::user()->gender}}</p>
 			    <p>Interests: {{Auth::user()->interests}}</p>
