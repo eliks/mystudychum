@@ -1,0 +1,277 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+
+class AddCountries extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		//
+		DB::table('countries')->insert(array('name'=>'Afghanistan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Albania','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Algeria','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'American Samoa','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Andorra','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Angola','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Anguilla','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Antarctica','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Antigua and Barbuda','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Argentina','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Armenia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Armenia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Aruba','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Australia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Austria','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Azerbaijan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Azerbaijan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bahamas','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bahrain','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bangladesh','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Barbados','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Belarus','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Belgium','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Belize','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Benin','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bermuda','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bhutan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bolivia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bosnia and Herzegovina','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Botswana','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bouvet Island','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Brazil','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'British Indian Ocean Territory','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Brunei Darussalam','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Bulgaria','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Burkina Faso','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Burundi','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cambodia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cameroon','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Canada','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cape Verde','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cayman Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Central African Republic','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Chad','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Chile','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'China','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Christmas Island','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cocos (Keeling) Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Colombia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Comoros','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Congo','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Congo, The Democratic Republic of The','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cook Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Costa Rica','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cote D\'ivoire','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Croatia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cuba','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Cyprus','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Czech Republic','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Denmark','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Djibouti','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Dominica','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Dominican Republic','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Easter Island','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Ecuador','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Egypt','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'El Salvador','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Equatorial Guinea','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Eritrea','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Estonia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Ethiopia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Falkland Islands (Malvinas)','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Faroe Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Fiji','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Finland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'France','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'French Guiana','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'French Polynesia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'French Southern Territories','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Gabon','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Gambia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Georgia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Germany','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Ghana','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Gibraltar','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Greece','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Greenland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Grenada','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Guadeloupe','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Guam','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Guatemala','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Guinea','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Guinea-bissau','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Guyana','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Haiti','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Heard Island and Mcdonald Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Honduras','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Hong Kong','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Hungary','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Iceland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'India','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Indonesia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Indonesia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Iran','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Iraq','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Ireland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Israel','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Italy','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Jamaica','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Japan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Jordan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kazakhstan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kazakhstan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kenya','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kiribati','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Korea, North','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Korea, South','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kosovo','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kuwait','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Kyrgyzstan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Laos','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Latvia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Lebanon','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Lesotho','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Liberia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Libyan Arab Jamahiriya','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Liechtenstein','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Lithuania','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Luxembourg','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Macau','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Macedonia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Madagascar','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Malawi','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Malaysia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Maldives','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mali','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Malta','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Marshall Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Martinique','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mauritania','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mauritius','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mayotte','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mexico','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Micronesia, Federated States of','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Moldova, Republic of','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Monaco','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mongolia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Montenegro','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Montserrat','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Morocco','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Mozambique','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Myanmar','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Namibia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Nauru','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Nepal','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Netherlands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Netherlands Antilles','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'New Caledonia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'New Zealand','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Nicaragua','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Niger','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Nigeria','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Niue','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Norfolk Island','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Northern Mariana Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Norway','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Oman','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Pakistan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Palau','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Palestinian Territory','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Panama','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Papua New Guinea','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Paraguay','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Peru','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Philippines','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Pitcairn','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Poland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Portugal','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Puerto Rico','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Qatar','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Reunion','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Romania','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Russia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Russia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Rwanda','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Saint Helena','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Saint Kitts and Nevis','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Saint Lucia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Saint Pierre and Miquelon','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Saint Vincent and The Grenadines','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Samoa','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'San Marino','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Sao Tome and Principe','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Saudi Arabia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Senegal','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Serbia and Montenegro','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Seychelles','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Sierra Leone','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Singapore','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Slovakia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Slovenia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Solomon Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Somalia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'South Africa','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'South Georgia and The South Sandwich Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Spain','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Sri Lanka','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Sudan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Suriname','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Svalbard and Jan Mayen','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Swaziland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Sweden','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Switzerland','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Syria','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Taiwan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Tajikistan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Tanzania, United Republic of','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Thailand','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Timor-leste','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Togo','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Tokelau','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Tonga','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Trinidad and Tobago','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Tunisia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Turkey','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Turkey','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Turkmenistan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Turks and Caicos Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Tuvalu','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Uganda','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Ukraine','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'United Arab Emirates','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'United Kingdom','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'United States','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'United States Minor Outlying Islands','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Uruguay','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Uzbekistan','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Vanuatu','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Vatican City','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Venezuela','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Vietnam','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Virgin Islands, British','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Virgin Islands, U.S.','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Wallis and Futuna','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Western Sahara','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Yemen','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Yemen','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Zambia','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+		DB::table('countries')->insert(array('name'=>'Zimbabwe','created_at'=>date('Y-m-d H:m:s'),'updated_at'=>date('Y-m-d H:m:s')));
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		//
+		DB::table('countries')->where('id', '>', '252')->delete();
+	}
+
+}

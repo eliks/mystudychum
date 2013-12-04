@@ -9,6 +9,7 @@ class SigninController extends BaseController {
 	   );
 	
 	public function get_index(){
+		Auth::logout();
 		return View::make('Signin.index');
 	} 
 	
@@ -25,7 +26,18 @@ class SigninController extends BaseController {
 			  $user_data = array('email'=>Input::get('email'), 'password'=>Input::get('password'));
 		
 				if (Auth::attempt($user_data)) {
-				   return Redirect::to('/')->with('message', 'You are now logged in!');
+					// Session::put('email', $user->email);
+					// $temp_view->user_email = Session::get('email');
+					// $temp_view = Redirect::to('/')->with('message', 'You are now logged in!');
+				    // return $temp_view;
+				    
+				    Session::put('email', $user->email);
+					// $user = User::where("email",Session::get("email"))->get()->first();
+					// $data = array("user"=>$user);
+					
+					return Redirect::to('/');
+					// return View::make('Profile.edit',$data);
+				   
 				} else {
 				   
 				    $tem_view = Redirect::to('signin')->withInput();

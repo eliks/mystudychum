@@ -75,9 +75,9 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@gmail.com <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->email}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
+			          <li><a href="/settings">Settings</a></li>
 			          <li><a href="/logout">Log out</a></li>
 			        </ul>
 			      </li>
@@ -92,7 +92,7 @@
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
 				<li class="active"><a href="/profile">Profile</a></li>
-				<li><a href="forums">Forum</a></li>
+				<li><a href="/forums">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
 				<li><a href="/activity">Activity</a></li>
 
@@ -104,6 +104,11 @@
 		<div class="col-sm-10">
 			<div class="row">
 				<h3 class="profile-heading">Your profile</h3>
+				<div class="form-group">
+					<p class="form-action">
+						<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="profile/edit">Edit Profile</a>
+					</p>
+				</div>
 				<!-- <?php
 					// function to form input sanitise input
 					//function test_input($data)
@@ -186,12 +191,14 @@
 						//}
 
 				//?> -->
-				
-				<p>Name: <em>Osborn Adu Kwateng</em></p>
-			    <p>Educational Level: Graduate</p>
-			    <p>Date of Birth: June 3, 1994</p>
-			    <p>Country: Ghana</p>
-			    <p>Gender: Male</p>
+				<div>
+					<img src="{{'/user_images/profile_pics/'.Auth::user()->image_url}}" width="200" />
+				</div>
+				<p>Name: <em>{{Auth::user()->first_name. ' '.Auth::user()->last_name}}</em></p>
+			    <p>Educational Level: {{Auth::user()->education}}</p>
+			    <p>Date of Birth: {{Auth::user()->DOB}}</p>
+			    <p>Country: {{Auth::user()->country}}</p>
+			    <p>Gender: {{Auth::user()->gender}}</p>
 
 				
 			</div>

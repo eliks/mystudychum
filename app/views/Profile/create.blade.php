@@ -23,7 +23,9 @@
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/create.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-tagsinput.css">
+		<link rel="stylesheet" href="assets/css/jasny-bootstrap.css">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
@@ -38,7 +40,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<a class="navbar-brand" href="/">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
@@ -75,9 +77,9 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@gmail.com <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->email}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
+			          <li><a href="/settings">Settings</a></li>
 			          <li><a href="/logout">Log out</a></li>
 			        </ul>
 			      </li>
@@ -92,7 +94,7 @@
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/my_chums">My Chums</a></li>
 				<li class="active"><a href="/profile">Profile</a></li>
-				<li><a href="/forum">Forum</a></li>
+				<li><a href="/forums">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
 				<li><a href="/activity">Activity</a></li>
 
@@ -105,7 +107,7 @@
 			<div class="row">
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
-					<form class="form-horizontal" action="/profile" method="POST">
+					<form class="form-horizontal" action="profile" method="POST">
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
@@ -440,6 +442,9 @@
 
 	<script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
 	<script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
+	<script src="assets/js/app.min.js"></script>
+	<script src="assets/js/bootstrap-tagsinput.js"></script>
+	<script src="assets/js/jasny-bootstrap.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -20,6 +20,11 @@ Route::get('/users', function()
     return 'Users!';
 });
 
+Route::get('chums', array('uses'=>'ChumsController@get_index'));
+// Route::get('chums', function(){ return View::make('ChumsController.get_index'); });
+
+Route::get('settings', array('uses'=>'SettingsController@get_index'));
+
 Route::controller('chums', 'ChumsController');
 
 Route::get('activity', array('uses'=>'ActivityController@get_index'));
@@ -30,7 +35,9 @@ Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
 
 Route::get('profile', array('uses'=>'ProfileController@get_index'));
 
-Route::post('create', array('uses'=>'ProfileController@create'));
+Route::post('profile', array('uses'=>'ProfileController@submit'));
+
+Route::get('profile/edit', array('uses'=>'ProfileController@edit'));
 
 Route::get('groups', array('uses'=>'GroupsController@get_index'));
 

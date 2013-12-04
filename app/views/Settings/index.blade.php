@@ -15,7 +15,7 @@
 
 <html>
 <head>
-	<title>StudyChum - Your Profile</title>
+	<title>StudyChum - Settings</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -90,7 +90,7 @@
 			<ul class="nav nav-pills nav-stacked">
 
 				<li><a href="/chums">Find Chums</a></li>
-				<li class="active"><a href="/my_chums">My Chums</a></li>
+				<li><a href="/my_chums">My Chums</a></li>
 				<li><a href="/profile">Profile</a></li>
 				<li><a href="/forums">Forum</a></li>
 				<li><a href="/groups">Groups</a></li>
@@ -103,7 +103,96 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">My Chums</h3>
+				<h3 class="profile-heading">Chum Settings</h3>
+				<!-- <?php
+					// function to form input sanitise input
+					//function test_input($data)
+					//{
+					   //$data = trim($data);
+					   //$data = stripslashes($data);
+					   //$data = htmlspecialchars($data);
+					   //return $data;
+					//}
+
+					// getting users profile details from form
+					//if ($_SERVER["REQUEST_METHOD"] == "POST")
+					//{
+
+						//$gender = test_input($_POST["gender"]);
+
+						//$country = test_input($_POST["country"]);
+
+						//$fname = test_input($_POST["fname"]);
+						//$lname = test_input($_POST["lname"]);
+						//$dob = test_input($_POST["dob"]);
+						//$education = test_input($_POST["education"]);		
+
+						//$image = test_input($_POST["image"]);
+
+						//$email = $user->getEmail();
+
+					    // new instance of database
+						//$db = new Database();
+					    //$db->connect();
+
+					    //array to hold user details from form input
+					    //$new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
+
+					    // inserting data into database
+					    //$db->insert('Users', $new_user);
+
+					    // selecting last id from the database
+					    //$db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
+					    //$res = $db->getResult();
+					    //$id = $res[User_Id];
+
+					    // using the tags
+
+					    //$tags = $_POST["tags"];
+						//$interests = explode(",", $tags);
+
+						//foreach ($interests as $interest) {
+							//making first letter of interest capitl
+							//$formatted_interest = ucfirst(strtolower($interest));
+							//$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
+						//}
+
+					    //$db->disconnect();
+
+						//}
+
+										
+				    
+				    
+				    // displaying information about user 
+					//$db = new Database();
+				    //$db->connect();
+				    //$db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+				    //$res = $db->getResult();
+
+				    //echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
+				    //echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
+				    //echo "<p>Date of Birth: " . $res["DOB"];
+				    //echo "<p>Country: " . $res["Country"];
+				    //echo "<p>Gender: " . $res["Gender"];
+
+				    //$db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
+				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
+				    //$res = $db->getResult();
+
+				    //echo "<p><b>Interests:</b></p>";
+						//foreach ($res as $interest) {
+							//echo "<span>" . $interest['Interest'] . "</span>" . ",";
+						//}
+
+				//?> -->
+				
+				<!-- <p>Name: <em>Osborn Adu Kwateng</em></p>
+			    <p>Educational Level: Graduate</p>
+			    <p>Date of Birth: June 3, 1994</p>
+			    <p>Country: Ghana</p>
+			    <p>Gender: Male</p> -->
+
 				
 			</div>
 		</div>

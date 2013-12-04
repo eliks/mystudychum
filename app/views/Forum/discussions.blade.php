@@ -24,15 +24,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+			<a class="navbar-brand" href="/">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			<ul class="nav navbar-nav">
+			<!-- <ul class="nav navbar-nav"> -->
 				<!-- <li class="active"><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
@@ -54,7 +54,7 @@
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
     			</li> -->
-			</ul>
+			<!-- </ul> -->
 
 
 			<ul class="nav navbar-nav navbar-right">
@@ -62,10 +62,10 @@
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name." ".Auth::user()->last_name}} <b class="caret"></b></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{Auth::user()->email}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="">Log out</a></li>
+			          <li><a href="/settings">Settings</a></li>
+			          <li><a href="/logout">Log out</a></li>
 			        </ul>
 			      </li>
 			</ul>
@@ -77,9 +77,13 @@
 			<ul class="nav nav-pills nav-stacked">
 
 				<li><a href="/chums">Find Chums</a></li>
-				<li><a href="/mychums">My Chums</a></li>
+				<li><a href="/my_chums">My Chums</a></li>
+				<li><a href="/profile">Profile</a></li>
+				<li class="active"><a href="/forums">Forum</a></li>
+				<li><a href="/groups">Groups</a></li>
+				<li><a href="/activity">Activity</a></li>
 
-				<li><a href="/forums">Forum</a></li>
+				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
 
