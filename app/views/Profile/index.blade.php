@@ -192,11 +192,11 @@
 
 				//?> -->
 				
-				<p>Name: <em>Osborn Adu Kwateng</em></p>
-			    <p>Educational Level: Graduate</p>
-			    <p>Date of Birth: June 3, 1994</p>
-			    <p>Country: Ghana</p>
-			    <p>Gender: Male</p>
+				<p>Name: <em>{{Auth::user()->first_name. ' '.Auth::user()->last_name}}</em></p>
+			    <p>Educational Level: {{Auth::user()->education}}</p>
+			    <p>Date of Birth: {{Auth::user()->DOB}}</p>
+			    <p>Country: {{Auth::user()->country_id}}</p>
+			    <p>Gender: {{Auth::user()->gender}}</p>
 
 				
 			</div>
