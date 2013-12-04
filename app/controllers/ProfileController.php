@@ -30,7 +30,7 @@ class ProfileController extends BaseController {
 		$user = User::where("email",Session::get("email"))->get()->first();
 		
 		$rules = array(
-		   'profile_image'=>'required|image',
+		   'profile_image'=>'image',
 		   'first_name'=>'required|alpha|min:2',
 		   'last_name'=>'required|alpha|min:2',
 		   'email'=>'required|email|unique:users,email,'.$user['id'],
