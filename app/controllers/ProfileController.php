@@ -20,8 +20,17 @@ class ProfileController extends BaseController {
 		// return $temp_view;
 		// Session::put('email', $user->email);
 		$user = User::where("email",Session::get("email"))->get()->first();
-		$data = array("user"=>$user);
+		
+		$countries = DB::table('countries')->get(array('id','name'));
 
+		foreach ($countries as $country_id => $country_name)
+		{
+		    // Create the options array
+		    $countries_array[$country_name -> id] = $country_name->name ;
+		}
+		
+		$data = array("user"=>$user,"countries"=>$countries_array);
+		// return $countries_array;
 		return View::make('Profile.edit',$data);
 	} 
 	
