@@ -133,7 +133,7 @@
 	<script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
 	<script>
 		window.scrollback = {
-		  streams:["your-community-name"],
+		  streams:["StudyChum"],
 		  theme: 'white'
 		};
 
