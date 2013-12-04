@@ -196,9 +196,10 @@
 				</div>
 				<p>Name: <em>{{Auth::user()->first_name. ' '.Auth::user()->last_name}}</em></p>
 			    <p>Educational Level: {{Auth::user()->education}}</p>
-			    <p>Date of Birth: {{Auth::user()->DOB}}</p>
+			    <p>Age: {{$today->diff(new DateTime(Auth::user()->DOB))->y}}</p>
 			    <p>Country: {{Auth::user()->country}}</p>
 			    <p>Gender: {{Auth::user()->gender}}</p>
+			    <p>Gender: {{Auth::user()->interests}}</p>
 
 				
 			</div>
