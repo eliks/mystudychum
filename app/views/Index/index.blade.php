@@ -92,7 +92,7 @@
                 Build a network of excellent minds across the globe.</div>
             </div>
         </div>
-
+        
         <script src="{{ URL::asset('assets/js/jquery-2.0.3.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/bs.min.js') }}"></script>
         <script src="{{ URL::asset('assets/js/app.js') }}"></script>
