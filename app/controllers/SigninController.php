@@ -34,10 +34,8 @@ class SigninController extends BaseController {
 				    Session::put('email', $user->email);
 					// $user = User::where("email",Session::get("email"))->get()->first();
 					// $data = array("user"=>$user);
-					$users = User::all();
-					$user = User::where("email",Session::get("email"))->get()->first();
-					$data = array("user"=>$user,"users"=>$users);
-					return Redirect::to('/')->with('data',$data);
+					
+					return Redirect::to('/');
 					// return View::make('Profile.edit',$data);
 				   
 				} else {
