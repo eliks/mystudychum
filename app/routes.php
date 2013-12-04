@@ -29,7 +29,7 @@ Route::controller('chums', 'ChumsController');
 
 Route::get('activity', array('uses'=>'ActivityController@get_index'));
 
-Route::controller('forums', 'ForumsController');
+Route::controller('forum', 'ForumController');
 
 Route::get('my_chums', array('uses'=>'MyChumsController@get_index'));
 
