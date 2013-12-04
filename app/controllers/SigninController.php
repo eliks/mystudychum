@@ -37,7 +37,7 @@ class SigninController extends BaseController {
 					$users = User::all();
 					$user = User::where("email",Session::get("email"))->get()->first();
 					$data = array("user"=>$user,"users"=>$users);
-					return View::make('Chums.index',$data);
+					return Redirect::to('/')->with('data',$data);
 					// return View::make('Profile.edit',$data);
 				   
 				} else {
