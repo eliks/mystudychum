@@ -55,10 +55,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->hasMany('Topic');
 	}
 	
-	// a user has a country
-	public function country()
-	{
-		return $this->hasOne('Country');
-	}
+	// // a user has a country
+	// public function country()
+	// {
+		// return $this->hasOne('Country');
+	// }
 
 }
