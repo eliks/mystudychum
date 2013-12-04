@@ -25,7 +25,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img class="header-logo" src="{{ URL::asset('assets/img/header_logo.webp') }}" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<a class="navbar-brand" href="">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
@@ -64,8 +64,8 @@
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->first_name." ".Auth::user()->last_name}} <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="">Log out</a></li>
+			          <li><a href="settings">Settings</a></li>
+			          <li><a href="logout">Log out</a></li>
 			        </ul>
 			      </li>
 			</ul>
@@ -73,13 +73,16 @@
 	</nav>
 
 	<div class="main-body">
+
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 
-				<li><a href="/chums">Find Chums</a></li>
-				<li><a href="/mychums">My Chums</a></li>
-
-				<li><a href="/forums">Forum</a></li>
+				<li><a href="chums">Find Chums</a></li>
+				<li><a href="my_chums">My Chums</a></li>
+				<li><a href="profile">Profile</a></li>
+				<li class="active"><a href="forums">Forum</a></li>
+				<li><a href="groups">Groups</a></li>
+				<li><a href="activity">Activity</a></li>
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
 

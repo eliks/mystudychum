@@ -40,7 +40,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
+			<a class="navbar-brand" href="">StudyChum</a>
 			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
@@ -79,8 +79,8 @@
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">osborn@gmail.com <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="/logout">Log out</a></li>
+			          <li><a href="profile">Profile</a></li>
+			          <li><a href="logout">Log out</a></li>
 			        </ul>
 			      </li>
 			</ul>
@@ -91,12 +91,12 @@
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 
-				<li><a href="/chums">Find Chums</a></li>
-				<li><a href="/my_chums">My Chums</a></li>
-				<li class="active"><a href="/profile">Profile</a></li>
-				<li><a href="/forum">Forum</a></li>
-				<li><a href="/groups">Groups</a></li>
-				<li><a href="/activity">Activity</a></li>
+				<li><a href="chums">Find Chums</a></li>
+				<li><a href="my_chums">My Chums</a></li>
+				<li class="active"><a href="profile">Profile</a></li>
+				<li><a href="forum">Forum</a></li>
+				<li><a href="groups">Groups</a></li>
+				<li><a href="activity">Activity</a></li>
 
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
@@ -107,7 +107,7 @@
 			<div class="row">
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
-					<form class="form-horizontal" action="/profile" method="POST">
+					<form class="form-horizontal" action="profile" method="POST">
 					<div class="fileinput fileinput-new" data-provides="fileinput">
 					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 					  <div>
