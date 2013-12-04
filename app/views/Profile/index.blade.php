@@ -191,7 +191,9 @@
 						//}
 
 				//?> -->
-				
+				<div>
+					<img src="{{'/user_images/profile_pics/'.Auth::user()->image_url}}" />
+				</div>
 				<p>Name: <em>{{Auth::user()->first_name. ' '.Auth::user()->last_name}}</em></p>
 			    <p>Educational Level: {{Auth::user()->education}}</p>
 			    <p>Date of Birth: {{Auth::user()->DOB}}</p>
