@@ -22,6 +22,10 @@ class CreateUsersTable extends Migration {
 			$table->string('education');
 			$table->string('email');
 			$table->string('image_url');
+<<<<<<< HEAD
+=======
+			$table->string('location');
+>>>>>>> de55b372676b97fb722d72cec5bd0c9edc8c4a9f
 			$table->string('interests');
 			$table->enum('gender', array('MALE', 'FEMALE'));
 			$table->integer('country_id');

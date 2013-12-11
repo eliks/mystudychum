@@ -117,7 +117,11 @@ class ProfileController extends BaseController {
 							    'DOB' => Input::get('DOB'),
 							    'country_id' => Input::get('country'),
 							    'education' => Input::get('education'),
+<<<<<<< HEAD
 							    //'image_url' => "",
+=======
+							    'image_url' => "",
+>>>>>>> de55b372676b97fb722d72cec5bd0c9edc8c4a9f
 							    'gender' => Input::get('gender'),
 							    'interests' => Input::get('tags')
 								);
